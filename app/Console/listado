@@ -1,0 +1,82 @@
+<h2>01hs</h2>
+<h5>OTAs:checkBookings</h5>
+Controla las reservas de las OTAS creadas el día anterior. Si hay alguna no creada, envía un mail al admin con el ID y nro
+Filtro: Reservas creadas en día anterior
+         
+<h2>01:40hs</h2>
+<h5>OTAs:checkBookingsCheckin</h5>
+Controla las reservas de las OTAS que aún no han hecho checkIN.. Si hay alguna no creada, envía un mail al admin con el ID y nro de reserva
+Filtro: Reservas con checkIn mayor al día actual.
+
+<h2>04hs</h2>
+<h5>ClearSessions:process</h5>
+Borrar las sessiones de usuarios antiguas
+Filtro: archivo de sesiones con más de 2 semanas 
+
+<h5>PaylandSeasson:process</h5>
+Precarga los datos del mes en curso para la pestaña PAYLAND
+
+<h2>02hs</h2>
+<h5>OTAs:SendAvailibilityMonth</h5>
+Envía la disponibilidad a las OTAS por cada Channel
+Filtro: Aptos por ChannelGroup, desde la fecha actual a 3 meses
+
+<h2>07hs</h2>
+<h5>partee:sendReminder</h5>
+envíar el recordatorio al huesped
+Filtro: a los N días del checkIn, los partees creados y en estado "VACÍO"
+<h5>secondPay:sendEmails</h5>
+Envía el mail de recordatorio del segundo pago 
+Filtro: a los N días del checkIn, las reservas en estado 'Pagada-la-señal' (menos AirBnb y Booking.com) y no haya sido enviado.
+
+<h2>14hs</h2>
+<h5>SafeBox:asignAndSend</h5>
++Si hay una caja asignada al apto y está disponible, se le asigna al huesped 
++Se envían los correos con las cajas asignada a los huespeds (txt Mail Buzón)
+Filtro: Reservas 'Reservado - stripe' y  'Pagada-la-señal', con checkIN del día
+
+<h2>12hs</h2>
+<h5>SendPoll:sendEmails</h5>
+Enviar encuesta automáticamente el dia de check out a las 12am
+TXT: 'Mail de Encuestas','Asunto de Encuestas'
+Filtro: Reservas 'Pagada-la-señal', con checkOUT de hasta 2 días anteriores
+
+<h2>21hs</h2>
+<h5>partee:sendAlert </h5>
+Envia el mail de los partee no finalizados al administrador 
+Filtro: Reservas 'Pagada-la-señal', con checkIN desde el día anterior, Partee creado y no finalizado
+
+<h2>Cada minuto</h2>
+<h5>OTAs:sendPricesSeason</h5>
+Revisa y envía los registros programados a la OTA
+
+
+<h2>Cada 5 minutos</h2>
+<h5>ProcessData:all</h5>
+Procesa todos los datos en segundo plano:
+<b>- bookingsWithoutCvc:</b>Botón SIN CVC => Filtro: 'Reservado - stripe','Pagada-la-señal'; No AirBnb; faltando 2 días para el checkout
+<b>- check_overbooking:</b> Botón overbooking => Filtro: reservas con checkIN desde la semana pasada a 6 meses
+<b>- check_pendienteCobro:</b> Alarma segundo cobro => Filtro: Pagada-la-señalm checkIN desde hoy a 15 días
+<b>- check_customPricesOtaGateway:</b> Programa los precios para enviar a la OTA (Botón sincronizar Precios)
+<b>- check_customMinStayOtaGateway:</b> Programa los minStay para enviar a la OTA (Botón sincronizar estancias mínimas)
+
+<h5>OTAs:sendMinStaySeason</h5>
+Revisa si hay registros para envíar a la OTA y los envía
+
+<h2>Cada 30 minutos</h2>
+<h5>partee:check</h5>
+Revisa y actualiza el estado de los partees creados
+Filtros: reservas con checkIN mayor a la fecha actual, partee no completado.
+
+<h2>Cada hora</h2>
+<h5>BookingsDays:load</h5>
+Toma las reservas y genera los registros por noche (para Revenue y Contabilidad)
+Filtros: Reservas=> 'Reservado - stripe','Pagada-la-señal','Reserva Propietario','ATIPICAS', 'blocked-ical' del año actual y del siguiente
+
+<h5>MultipleRoomLock:Process</h5>
+Genera bloqueos PROGRAMADOS de departamentos
+         
+         
+       
+         
+         

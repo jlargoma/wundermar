@@ -1,0 +1,19 @@
+User-Agent: *
+Allow: /
+Disallow: /thanks-you
+Disallow: /thanks-you-forfait
+Disallow: /paymeny-error
+Disallow: /fotos/
+Disallow: /contacto
+Disallow: /admin
+Disallow: /es/invierno/
+Disallow: /politica-privacidad
+Disallow: /aviso-legal
+Disallow: /politica-cookies
+Disallow: /condiciones-contratacion
+Disallow: http://sierranevada.es
+
+User-agent: Googlebot-Image
+Disallow: /
+
+Sitemap: https://www.apartamentosierranevada.net/sitemap.xml

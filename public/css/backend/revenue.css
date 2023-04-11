@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 11, 2020, 6:24:09 PM
+    Author     : cremonapg
+*/
+
+
+.contenedor .table tr th,
+.contenedor .table tr td{
+  text-align: center;
+}
+.contenedor .table tr th.static,
+.contenedor .table tr td.static{
+  text-align: left;
+}
+
+.contenedor{
+  max-width: 92%;
+  margin: 1em auto;
+}
+.contenedor .static-empty {
+  background-color: #fafafa !important;
+  width: 110px;
+}
+
+
+.tab-channels {
+  background-color: #6d5cae;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 2px;
+  margin: -1px;
+  color: #fff;
+}
+.tab-channels.active {
+  font-weight: 800;
+  background-color: #51b1f7;
+}
+.summary{
+  max-width: 560px;
+  box-shadow: 1px 1px 8px #6d5cae;
+  /* background-color: #6d5cae5c; */
+  margin-bottom: 1em;
+  padding: 7px;
+  margin-top: 7px;
+}
+
+td.editable.tSelect {
+  width: 100px;
+}
+.filter-field {
+  float: left;
+  margin-right: 1em;
+}
+.tabChannels {
+  background-color: #6d5cae;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 2px;
+  margin: 6px 0;
+  color: #fff;
+  cursor: pointer;
+}
+.tabChannels.active {
+  font-weight: 800;
+  background-color: #51b1f7;
+}
+.c-pickup .summary{
+  float: right;
+}
+.c-dashboard input#fechas {
+    width: 180px;
+}
+.c-dashboard select#site {
+    width: 155px;
+    padding: 3px;
+}
+
+.table-vta-agenc thead tr th {
+    background-color: #6d5cae;
+    color: #FFF !important;
+    border: 1px solid;
+    text-align: center;
+}
+.table-vta-agenc tfoot tr {
+    border: 1px solid #adabab;
+}
+.table-vta-agenc td,
+.table-vta-agenc th{
+    text-align: center;
+}
+@media only screen and (max-width: 768px){
+  .contenedor{
+    max-width: 98%;
+  }
+}

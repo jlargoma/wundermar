@@ -1,0 +1,28 @@
+1- Loguease y optener token (dura 1 hora)
+2- Crearlas habitaciones -> 1 por OTA-typo -> se hace desde el panel y luego se obtiene por api
+5- Crear los planes de Restricción restriction_plans - Rooms (crear el MinStay)
+3- Crear los planes => 1 por cada channel - Rates
+4- Asignar los precios a los planes-Rooms -> rate price
+6- Usar restrictions para actualizar el MinStay
+https://swagger.sandbox.reservationsteps.ru/?urls.primaryName=English
+
+Bnovo API Airbnb
+https://swagger.sandbox.reservationsteps.ru/?urls.primaryName=Airbnb%20-%20English#/Channel%20Controller/createOtaChannelOAuth
+1. Adding an Airbnb Channel: /v1/api/ota_oauth_connect_link
+2. Getting data about channel: /v1/api/ota_settings
+3. Room types and rates mapping /v1/api/ota_external_data
+4. Getting mapped channel rate plans /v1/api/ota_external_plans
+5. Getting mapped channel room types: /v1/api/ota_external_room_types
+6. Getting the basic data about the channel with all the listings: /v1/api/ota_data
+7. Getting, creating, and editing 1 Airbnb listing: /v1/api/ota_room_type
+8. Special offer creation for Airbnb listings /v1/api/airbnb_rule_groups
+9. Airbnb special offer periods creation /v1/api/ota_room_type
+10. Publishing Airbnb listing /v1/api/ota_room_type
+
+
+
+ ["ota_settings_id"]=> string(5) "17754"
+ ["ota_settings_id"]=> string(5)  91
+
+
+"{"account_id":346,"plan_id":28,"warranty_type":"no","guarantee_sum":0,"arrival":"2020-04-28","departure":"2020-04-30","name":"Иван","surname":"Иванов","email":"test@mail.com","phone":"+7(999)111-22-33","comment":"test comment","lang":"ru","extra":null,"room_types":{"38":{"count":2,"prices":{"2020-04-28":6300,"2020-04-29":6300},"room_type_services":[{"services":[{"i":18,"c":1,"total_amount":300,"day_prices":{"2020-04-28":{"count":1,"price":300}}}]},{"services":[{"i":28,"c":1,"total_amount":300,"day_prices":{"2020-04-28":{"count":1,"price":300}}}]}]}},"fiscal_items":[{"name":"","quantity_value":1,"quantity_measure":"усл.","price":1300.13,"tax":3,"tax_system":0,"room_type_id":38,"payment_subject_type":4,"payment_method_type":2,"item_code":1},{"name":"","quantity_value":1,"quantity_measure":"усл.","price":1300.13,"tax":3,"tax_system":0,"room_type_id":38,"payment_subject_type":4,"payment_method_type":2,"item_code":2}]}"

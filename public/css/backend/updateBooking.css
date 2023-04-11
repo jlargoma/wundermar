@@ -1,0 +1,550 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 21, 2020, 10:37:17 AM
+    Author     : cremonapg
+*/
+
+.pgn-wrapper[data-position$='-right'] {
+  right: 82% !important;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#overlay {
+  position: absolute;
+  left: 0;
+  opacity: .1;
+  background-color: blue;
+  height: 35px;
+  width: 100%;
+}
+
+.StripeElement {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-price {
+  background-color: white !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 1px 3px 0 #e6ebf1 !important;
+  -webkit-transition: box-shadow 150ms ease !important;
+  transition: box-shadow 150ms ease !important;
+}
+button.partee-cp {
+  position: relative;
+  background-color: #fff;
+  color: #10cfbd;
+  font-size: 2.52em;
+  border: none;
+}
+button.partee-cp:hover {
+  /*background-color: #ff5a5f;*/
+  color:#00d8c4;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 15%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #929292 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+button.partee-cp .tooltip.show{
+  display: block;
+  opacity: 1;
+  width: 100%;
+  top: -3em;
+  left: 0;
+}
+.tooltiptext {
+  position: absolute;
+  font-size: 11px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.42);
+  padding: 2px 5px;
+  width: 10em;
+  border-radius: 7px;
+}
+span#loadchatbox {
+  float: right;
+  font-size: 0.75em;
+  color: #daeffd;
+  cursor: pointer;
+}
+.partee-icon .pf-icon {
+  float: left;
+  width: 50%;
+  text-align: center;
+  display: block;
+  font-size: 20px;
+}
+.partee-icon .policeman{
+  display: block;
+  float: left;
+  width: 50%;
+  background-repeat: no-repeat;
+  height: 2.3em;
+  margin-top: 00;
+}
+.tooltiptext.FF_resume{
+  color: inherit;
+  text-align: left;
+  z-index: 9;
+  width: 22em;
+  display: none;
+}
+.showFF_resume:hover .tooltiptext.FF_resume{
+  display: block;
+}
+.tooltiptext.FF_resume .table tbody tr td{
+  padding: 8px !important;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.tooltiptext.FF_resume span.Pendiente {
+  color: red;
+}
+.tooltiptext.FF_resume p{
+  color: #fff;
+}
+#changeRealPrice{
+  cursor: pointer;
+}
+#updateForm{
+  overflow: auto;
+}
+.extras_tit span{
+  background-color: yellow;
+  padding: 7px;
+  border-radius: 3px;
+  color: #000;
+}
+.payment-resume{
+  display: none;
+}
+
+
+.icon-lst {
+  font-size: 2em !important;
+  float: left;
+  margin: 8px 5px;
+  width: 1.5em;
+  min-height: 1.5em !important;
+  height: 35px;
+}
+
+.icon-lst.partee-icon {
+  width: 3em;
+}
+.icon-lst a,
+.icon-lst img {
+  width: 100%;
+}
+.icon-lst.partee-icon .policeman {
+  margin-top: -1px;
+}
+
+.icon-lst .btn {
+  background-size: contain;
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  height: 3em;
+  background-position: center;
+  background-color: transparent;
+}
+.extras{
+  clear: both;
+  border: 2px solid #000;
+  padding: 2em 1em 1em;
+  position: relative;
+}  
+.extras_tit{
+  position: absolute;
+  top: -31px;
+  padding: 13px;
+  background-color: #fff;
+  left: 7px;
+  z-index: 2;
+  font-size: 1.7em;
+  cursor: pointer;
+}
+.input-price label{
+  position: absolute;
+  right: 8px;
+  width: 19px;
+  top: 1px;
+  padding-top: 6px;
+  height: 33px;
+  background-color: #efefef;
+  font-size: 20px;
+  font-weight: 400;
+}
+.extras_item.newItem.row {
+  margin-top: 1em;
+}
+.extras_item.row {
+  margin-bottom: 7px;
+}
+#extra_total{
+  font-weight: 600;
+}
+.extra-cost{
+  padding-top: 1px;
+  font-size: 1.5em;
+}
+#sendNotifPayment {
+  background-color: #daeffd;
+  padding: 11px 0 0 0;
+}
+#sendNotifPayment .checkbox,
+#sendNotifPayment input#send_notif{
+  float: left;
+}
+#sendNotifPayment .checkbox{
+  width: 15%;
+  margin: 0 2% 10px 2%;
+}
+#sendNotifPayment #email_notif{
+  float: left;
+  width: 70%;
+}
+.btn.btn-success.cobrar {
+  width: 67%;
+  min-height: 49px;
+  margin-top: 3px;
+  padding: 2px;
+  font-size: 17px;
+  font-weight: 800;
+}
+#visaDataContent{
+  overflow: auto;
+}
+#visaDataContent input#cc_cvc {
+    width: 35%;
+}
+#visaDataContent input {
+    width: 60%;
+    border: none;
+    float: left;
+    padding: 4px;
+}
+.btn-bnovo {
+    background-image: url(/img/bnovo.png) !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 2.5em;
+    margin: auto;
+    min-height: 31px;
+    float: left;
+}
+.inputs {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.input-1{
+  width: 190px;
+}
+.input-2{
+  width: 75px;
+}
+.input-3{
+  width: 120px;
+}
+
+.form-control[disabled]{
+  background-color: #b3b3b369 !important;
+  cursor: not-allowed;
+  border: none;
+}
+input#minDay.danger {
+  border: 1px solid red;
+  box-shadow: 1px 1px 4px 1px red;
+}
+
+.icon-lst.partee-icon{
+  position: relative;
+}
+
+.extras_item.newItem .save{
+  color: #6d5cae;
+}
+.extras_item .action{
+  margin-top: 4px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.extras select.form-control,
+.extras input.form-control {
+  border-color: #656565;
+  padding: 2px;
+}
+.payment-box{
+  margin: 30px 4px;
+  background-color: #daeffd!important;
+  padding: 8px;
+}
+
+span.beneficio-text {    color: #FFF;}
+span.beneficio {
+    float: left;
+    height: 90px;
+    width: 60%;
+    font-size: 2em;
+    padding: 7px;
+    color: #FFF;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-draggable {
+    background-color: #FFF;
+    padding: 10px;
+    box-shadow: 1px 1px 16px #000;
+    border-radius: 7px;
+}
+.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle {
+    width: 96%;
+    font-size: 1.2em;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+}
+button.ui-dialog-titlebar-close {
+    background-image: url(/img/close.jpg);
+    background-size: cover;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border: none;
+    float: right;
+    content: "";
+    font-size: 1px;
+}
+.ui-dialog-buttonset button {
+    margin-right: 1em;
+}
+
+div#dialog-confirm {
+    position: absolute;
+    margin-top: 4em;
+}
+
+.cliHas{
+  font-size: 36px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 3px;
+  color: #d1d1d1;
+  min-height: 30px;
+}
+.cliHas.active{
+  color: #ed2402;
+}
+@media (max-width: 991px){
+  .ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle,
+  div#dialog-confirm{
+      position: relative;
+  }
+
+
+}
+@media (max-width: 518px){
+    span.beneficio-text{float: revert;}
+    span.beneficio{height: auto;}
+}
+@media (min-width: 600px){
+  .table-responsive {
+    overflow: inherit;
+  }
+
+}
+
+@media (max-width: 518px){
+
+
+  .payment-resume{
+    display: block;
+  }
+  .mobile-right{
+    float: right;
+  }
+  #updateForm .padding-block{
+    padding: 0px;
+  }
+  #updateForm .row-mobile{
+    padding: 0;
+    clear: both;
+    width: 100%;
+    overflow: auto;
+  }
+  #updateForm .row-mobile label{
+    float: left;
+    width: 30%;
+    padding: 5px 0px;
+    text-align: left;
+  }
+  #updateForm .row-mobile input,
+  #updateForm .row-mobile .input_dates,
+  #updateForm .row-mobile select{
+    float: left;
+    width: 60% !important;
+  }
+  #updateForm .input_dates input{
+    width: 100% !important;
+  }
+  .content-guardar .status.form-control{
+    float: left;
+    width: 60%;
+    margin-left: 4%;
+  }
+  .mobil-p0{
+    padding: 0;
+  }
+  #updateForm .boxtotales {
+    width: 33% !important;
+    padding: 3px;
+  }
+  #updateForm .boxtotales:last-child {
+    width: 66% !important;
+    min-height: 88px;
+  }
+  #updateForm .boxtotales label,
+  #updateForm .boxtotales input{
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+    min-height: 41px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .calculos .col-xs-3{
+    min-height: 62px;
+    border: 1px solid #fff;
+  }
+
+  .mobile-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: #f9ff00;
+    padding: 7px;
+    left: 0;
+    box-shadow: 0px 2px 14px #000;
+  }
+  .mobile-fixed h4{
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  .mobile-fixed h5{
+    font-size: 14px;
+  }
+  .icon-lst{
+    width: 1.1em;
+  }
+  .icon-lst.partee-icon{
+    position: relative;
+    min-height: 0px !important;
+    height: auto !important;
+    width: 2.9em;
+  }
+  .icon-lst.partee-icon .policeman {
+    height: 41px !important;
+  }
+  
+
+  .input-1 {
+    width: 142px;
+  }
+  .input-2 {
+    width: 59px;
+  }
+  form label {
+    font-size: 11px !important;
+  }
+  input.minimal {
+    font-size: 12px !important;
+    padding: 1px !important;
+    text-align: center;
+  }
+  input.btn.btn-success.cobrar {
+    margin: -7px;
+    width: 114% !important;
+    font-size: 14px;
+  }
+  #sendNotifPayment #email_notif{
+    width: 100%;
+  }
+  #sendNotifPayment .checkbox {
+    width: 75%;
+    text-align: left;
+    margin: 8px 2% 10px 2%;
+  }
+  #sendNotifPayment {
+    padding: 0 7px 0;
+    height: 84px;
+  }
+  button.btn.btn-success.font-s24.font-w400.mb-1em.mt-1em {
+    margin: 1px auto;
+  }
+  .btn-payment button {
+    padding: 5px 7px;
+    font-size: 18px;
+  }
+  .payment-box h2{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1em;
+  }
+  .partee-icon .tooltip-2 .tooltiptext {
+    right: -90px !important;
+  }
+  .input-price label {
+    display: none;
+}
+.extras_tit {
+    font-size: 15px;
+}
+}

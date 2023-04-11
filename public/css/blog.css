@@ -1,0 +1,317 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 15, 2020, 9:53:04 AM
+    Author     : cremonapg
+*/
+
+.blue{ color: #011F26}
+.green_1{ color: #118C76}
+.green_2{ color: #25D9B8}
+.yellow{ color: #F2BB16}
+.brown{ color: #BF800B}
+
+.btn.btn-primary{background-color: #25D9B8;border-color: #118c7687;}
+.btn.btn-primary:hover{background-color: #118C76;}
+
+
+header{
+  z-index: 99;
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 0;
+  color: #fff;
+}
+header .nav-menu ul {
+  max-width: 726px;
+  border-top: 3px solid #011F26;
+  margin: 6px auto;
+  border-bottom: 3px solid #011F26;
+}
+header .nav-menu ul li {
+  display: inline-block;
+  padding: 7px 19px;
+  font-size: 24px;
+}
+header .nav-menu ul li a {
+  color: #fff;
+}
+header .nav-menu ul li a:hover {
+  font-weight: 600;
+}
+header .nav-menu ul li .mega-menu-column .mega-menu-title a{
+  color: #3f51b5!important;
+  text-shadow: none;
+}
+
+
+
+.page-header-tit{
+  margin-top: -12em;
+  padding: 0;
+  margin-bottom: 1em;
+  position: relative;
+  box-shadow: 0px 5px 9px #011F26;
+}
+.black-layer {
+  position: absolute;
+  height: 100%;
+  width: 102%;
+  background-color: rgba(31, 31, 31, 0.3);
+}
+.page-header-tit .loadBackground{
+  padding-top: 13em;
+
+}
+.page-header-tit .container{
+  font-size: 4em;
+  padding-top: 1.5em;
+  min-height: 5em;
+}
+.page-header-tit h1{
+  font-size: 1em;
+  font-weight: 800;
+  text-shadow: 2px 2px 0px #3f50b5;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  margin-bottom: 10px;
+
+}
+.page-header-tit a{
+  color: #ffffff;
+  font-size: 0.5em;
+  z-index: 1;
+  position: relative;
+  display: block;
+
+}
+.loadBackground{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+h1 {color: #ffffff !important;
+    text-transform: uppercase;
+}
+.page-title{
+  min-height: 420px;
+}
+
+
+
+
+.list-items{
+  height: 18em;
+  display: block;
+  position: relative;
+  margin-bottom: 1em;
+  box-shadow: 3px 4px 5px #000;
+  border-radius: 6px;
+  padding: 0;
+}
+.list-items a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.list-items a:hover{
+  background-color: rgba(63, 80, 181, 0.38);
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+  /*background-color: rgba(63, 80, 181, 0.38)*/
+}
+
+.excusion-dest .list-items a:hover{
+   background-color: rgba(37, 217, 184, 0.38);
+}
+.excusion-dest .list-items span.tit{
+   background-color: rgba(37, 217, 184, 0.78);
+}
+
+.list-items span.tit {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  background-color: rgba(63, 80, 181, 0.75);
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 8px 0;
+  width: 100%;
+  left: 0;
+}
+
+.blog-content img {
+  margin-bottom: 1em;
+  box-shadow: 3px 4px 5px #000;
+  border-radius: 6px;
+}
+.blog-content h3 {
+  color: #3f50b5;
+  margin: 23px 0 12px;
+}
+.blog-content p {
+  margin-bottom: 10px;
+}
+
+.excusion-dest .container-image-box img {
+  height: 195px;
+}
+
+.excusion-dest .lSAction a {
+  top: 40%;
+}
+
+.excusion-dest .lSNext:before,
+.excusion-dest .lSPrev:before {
+  width: 32px;
+  display: block;
+  background-color: #020202;
+  color: #ffffff;
+  font-size: 3em;
+}
+
+.excusion-dest .lSNext:before{
+  margin-left: 2px;
+}
+.excusion-dest h3{
+  font-weight: 600 !important;
+  color: #5a5a5a;
+  padding: 0;
+  margin: 0;
+}
+
+footer,
+.copyright{
+  text-align: center;
+  background-color: #011F26;
+}
+.copyright{
+  display: none;
+}
+footer .sites a{
+  color: #fff;
+  font-size: 18px;
+  margin: 0px 1em;
+  padding: 1em 0px;
+  display: inline-block;
+}
+
+.widget-best-rooms {
+    background-color: #011F26;
+    box-shadow: 3px 4px 5px #000;
+    border-radius: 6px;
+    color: #fff;
+    max-width: 455px;
+    margin: auto;
+  }
+  .widget-best-rooms .text {
+    color: #FFF;
+    padding: 0 15px;
+  }
+  .widget-best-rooms h2 {
+    color: #FFF;
+    font-size: 24px;
+    padding-top: 13px;
+    margin-bottom: 0;
+  }
+  .widget-best-rooms ul li {
+   padding: 14px 26px;
+   text-align: left;
+  }
+ 
+  .widget-best-rooms picture {
+    width: 100%;
+    max-width: 195px;
+  }
+  .widget-best-rooms picture img {
+    border-radius: 7px;
+  }
+
+  .widget-best-rooms .room h3{
+    margin-bottom: 7px;
+    text-align: left;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: -9px;
+  }
+  .widget-best-rooms .room span {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+  }
+
+  .widget-best-rooms .room p.apto-descr {
+    text-align: left;
+    color: #FFF;
+    margin-bottom: 0;
+  }
+  
+
+[class*="colum-"] {
+  position: relative;
+  min-height: 1px;
+  padding-left: 7px;
+  padding-right: 7px;
+  float: left;
+}
+.colum-2{ width: 16%;}
+.colum-4{ width: 33%;}
+.colum-5{ width: 41%;}
+.colum-6{ width: 50%;}
+.colum-7{ width: 58%;}
+.colum-8{ width: 66%;}
+.colum-10{ width: 83%;}
+.colum-12{ width: 100%;}
+
+
+@media (max-width: 560px){
+    header .nav-menu ul li {
+    padding: 7px 7px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 426px){
+  
+
+
+  .page-header-tit h1{
+    font-size: 0.7em;
+    padding-top: 0.5em;
+  }
+  .hidden-425{
+    display: none;
+  }
+  .copyright{
+    text-align: center;
+  }
+  .copyright .sites{
+    text-align: center;
+    margin-top: 1em;
+  }
+  .copyright a{
+    display: block;
+    width: 100%;
+    margin: 6px auto !important;
+  }
+  .colum-mobile-block{
+    float: none;
+    display: block;
+    width: 98%;
+    margin: 1em auto;
+  }
+  /*    .nav-menu ul li a {
+        color: #3f50b5 !important;
+        font-size: 1.5em !important;
+        text-shadow: none;
+      }*/
+}

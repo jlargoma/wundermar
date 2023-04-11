@@ -1,0 +1,268 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"coste",
+				"costeTotal"
+			],
+			[
+				"Room",
+				"RoomID"
+			],
+			[
+				"room",
+				"roomID"
+			],
+			[
+				"dr",
+				"dropdown"
+			],
+			[
+				"drop",
+				"dropdown-menu"
+			],
+			[
+				"get",
+				"getListFilms"
+			],
+			[
+				"tex",
+				"text-center"
+			],
+			[
+				"console",
+				"console.log"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "Package Control: insa",
+		"selected_items":
+		[
+			[
+				"Package Control: insa",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/miramarski/.env",
+		"/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf",
+		"/Applications/MAMP/conf/apache/httpd.conf",
+		"/private/var/folders/dz/qhnblq4x4m17758tpghm3l0m0000gn/T/d0be66f9-15f0-48be-aad9-bd806e601734/var/www/vhosts/apartamentosierranevada.net/admin.apartamentosierranevada.net/protected/modules/booking/controllers/BookController.php",
+		"/Users/jesus/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/jesus/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/jesus/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/jesus/Desktop/jesus/index.html",
+		"/Applications/MAMP/htdocs/evolutio/database/migrations/2017_03_13_230408_update_users_table.php",
+		"/Applications/MAMP/htdocs/evolutio/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/Applications/MAMP/htdocs/evolutio/evolutio.sql",
+		"/private/var/folders/dz/qhnblq4x4m17758tpghm3l0m0000gn/T/d0be66f9-15f0-48be-aad9-bd806e601734/var/www/vhosts/evesportswear.es/tienda/tienda/classes/Product.php",
+		"/private/var/folders/dz/qhnblq4x4m17758tpghm3l0m0000gn/T/d0be66f9-15f0-48be-aad9-bd806e601734/var/www/vhosts/evolutio.fit/httpdocs/evolutio/app/Http/Controllers/CobrosController.php",
+		"/private/var/folders/dz/qhnblq4x4m17758tpghm3l0m0000gn/T/d0be66f9-15f0-48be-aad9-bd806e601734/var/www/vhosts/evolutio.fit/httpdocs/evolutio/app/BonosForUsers.php",
+		"/private/var/folders/dz/qhnblq4x4m17758tpghm3l0m0000gn/T/d0be66f9-15f0-48be-aad9-bd806e601734/var/www/vhosts/mercadodelaesperanza.com/httpdocs/frontend/views/layouts/_header.php",
+		"/private/var/folders/dz/qhnblq4x4m17758tpghm3l0m0000gn/T/d0be66f9-15f0-48be-aad9-bd806e601734/var/www/vhosts/mercadodelaesperanza.com/httpdocs/backend/views/site/index.php",
+		"/private/var/folders/dz/qhnblq4x4m17758tpghm3l0m0000gn/T/d0be66f9-15f0-48be-aad9-bd806e601734/var/www/vhosts/mercadodelaesperanza.com/httpdocs/backend/views/default/index.php",
+		"/private/var/folders/dz/qhnblq4x4m17758tpghm3l0m0000gn/T/d0be66f9-15f0-48be-aad9-bd806e601734/var/www/vhosts/mercadodelaesperanza.com/httpdocs/backend/www/index.php",
+		"/Applications/MAMP/htdocs/evolutio/public/index.php",
+		"/Applications/MAMP/htdocs/index.html",
+		"/untitled.html",
+		"/Users/jesus/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/prueba.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fit",
+			"evolutio",
+			"comja",
+			"reiden",
+			"/ul",
+			"role",
+			"content",
+			"getVideoSerie",
+			"getVideoFilm",
+			"getlistF",
+			"center",
+			"id",
+			"release",
+			"key",
+			">');\n",
+			"].",
+			"this",
+			"title",
+			"virtual host",
+			"virtual hist",
+			"virtual",
+			"id_product",
+			"face",
+			"allow",
+			"read write",
+			"listen",
+			"Virtual Hosts",
+			"virtual"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "composer.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

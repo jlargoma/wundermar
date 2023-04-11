@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'mobiscroll-demo-icons';
+src: url('mobiscroll-demo-icons.eot?0lawt2');
+src: url('mobiscroll-demo-icons.eot?#iefix0lawt2') format('embedded-opentype'),
+ url('mobiscroll-demo-icons.ttf?0lawt2') format('truetype'),
+ url('mobiscroll-demo-icons.woff?0lawt2') format('woff'),
+ url('mobiscroll-demo-icons.woff') format('woff'),
+ url('mobiscroll-demo-icons.svg?0lawt2#mobiscroll-demo-icons') format('svg');
+
+    font-style: normal;
+}
+
+.micons,
+.micons:before {
+    text-shadow: none;
+    font-family: 'mobiscroll-demo-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+}
+
+/* Icons */
+.icon-africa:before { content: "\f100"; }
+.icon-asia:before { content: "\f101"; }
+.icon-australia:before { content: "\f102"; }
+.icon-beef:before { content: "\f103"; }
+.icon-compare_iphone_models:before { content: "\f104"; }
+.icon-dessert:before { content: "\f105"; }
+.icon-entire-home:before { content: "\f106"; }
+.icon-europe:before { content: "\f107"; }
+.icon-expand:before { content: "\f108"; }
+.icon-icloud:before { content: "\f109"; }
+.icon-ios_8:before { content: "\f10a"; }
+.icon-iphone_6:before { content: "\f10b"; }
+.icon-iphone_accessories:before { content: "\f10c"; }
+.icon-lactos-free:before { content: "\f10d"; }
+.icon-main:before { content: "\f10e"; }
+.icon-mbsc-logo:before { content: "\f10f"; }
+.icon-north-america:before { content: "\f110"; }
+.icon-pork:before { content: "\f111"; }
+.icon-poultry:before { content: "\f112"; }
+.icon-privat-room:before { content: "\f113"; }
+.icon-seafood:before { content: "\f114"; }
+.icon-shared-room:before { content: "\f115"; }
+.icon-snack:before { content: "\f116"; }
+.icon-south-america:before { content: "\f117"; }
+.icon-starter:before { content: "\f118"; }
+.icon-vegan:before { content: "\f119"; }
+.icon-vegetarian:before { content: "\f11a"; }

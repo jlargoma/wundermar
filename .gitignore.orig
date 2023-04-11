@@ -1,0 +1,23 @@
+/vendor
+/node_modules
+/public/storage
+/public/actividades
+/public/contratos
+public/img/miramarski/apartamentos/*
+Homestead.yaml
+Homestead.json
+.env
+/.phpintel
+/.idea
+test.blade.php
+<<<<<<< HEAD
+/nbproject/private/
+.htaccess
+storage
+
+nbproject
+=======
+nbproject
+/.htaccess
+
+>>>>>>> b8d54ac2dc4d0844126dbdc4c00ed7c4fd30aa2a
