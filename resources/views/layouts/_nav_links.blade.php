@@ -48,9 +48,6 @@
     <li class="{{ $pathRequest == 'admin/caja' ? 'active' : '' }}">
         <a href="{{ url('admin/caja/') }}" class="detailed">Caja</a>
     </li>
-    <li class="{{ $pathRequest == 'admin/excursiones' ? 'active' : '' }}">
-        <a href="{{ url('admin/excursiones') }}" class="detailed">Excursiones</a>
-    </li>
     <li class="{{  (preg_match('/\/show-INE/i',$pathRequest))  ? 'active' : '' }}">
         <a href="{{ url('/admin/show-INE') }}" class="detailed">Estad. INE</a>
     </li>
@@ -63,9 +60,7 @@
     <li class="{{ $pathRequest == 'admin/contabilidad'  ? 'active' : '' }}">
       <a href="{{ url('admin/contabilidad') }}" class="detailed">CONTABILIDAD</a>
     </li>
-    <li class="{{ $pathRequest == 'admin/contents-home'  ? 'active' : '' }}">
-      <a href="{{ url('admin/contents-home') }}" class="detailed">BLOG</a>
-    </li>
+
 <?php endif ?>
     
 </ul>

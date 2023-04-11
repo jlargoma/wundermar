@@ -68,15 +68,9 @@
     </head>
     <body class="fixed-header   windows desktop pace-done sidebar-visible menu-pin" style="padding-top:0px!important">
             <nav class="navbar navbar-inverse" role="navigation" style="<?php if (config('app.appl') == "wundermar"): ?>background-color: #6d5cae!important; <?php else:?> background-color: #295d9b!important;<?php endif; ?>">
-            <?php if (config('app.appl') == "wundermar"): ?>
                 <a class="navbar-brand" href="{{ route('dashboard.planning') }}" style="max-width: 155px;">
-                    <img src="{{ assetV('img/wundermar/logo_wundermar_b.png') }}" alt="" style="width: 100%">
+                    <img src="{{ assetV('img/logo.png') }}" alt="" style="width: 100%">
                 </a>
-            <?php else:?>
-                <a class="navbar-brand" href="{{ route('dashboard.planning') }}" style="max-width: 155px;">
-                    <img src="{{ assetV('img/miramarski/logo_miramar.png') }}" alt="" style="width: 100%;     margin-top: -5px;">
-                </a>
-            <?php endif; ?>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
