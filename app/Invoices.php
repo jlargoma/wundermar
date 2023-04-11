@@ -32,44 +32,14 @@ class Invoices extends Model
   public function emisor($emisor = null) {  
     $emisores = [
       'riad' => [
-          'name' => 'RIAD PUERTAS DEL ALBAICIN',
-          'nif' => 'B19591205',
-          'address' => 'Cuesta San Gerónimo 23',
+          'name' => 'wundermar',
+          'nif' => '99999999',
+          'address' => 'Cuesta 23',
           'phone' => '',
-          'zipcode' => '18010 Granada',
-          'REAT'=>'A/GR/00291',
-          'url'=>'www.riadpuertasdelalbaicin.com',
+          'zipcode' => '18010 d',
+          'REAT'=>'A/dd291',
+          'url'=>'https://www.wundermar.es/',
           'site_id'=>1
-      ],
-      'siloe' => [
-          'name' => 'SILOE PLAZA',
-          'nif' => 'B19591205',
-          'address' => 'Cuesta San Gerónimo 23',
-          'phone' => '',
-          'zipcode' => '18010 Granada',
-          'REAT'=>'A/GR/00281',
-          'url'=>'www.siloeplaza.es',
-          'site_id'=>5
-      ],
-      'gloria' => [
-          'name' => 'GLORIA SUITES',
-          'nif' => 'B19591205',
-          'address' => 'Cuesta San Gerónimo 23',
-          'phone' => '',
-          'zipcode' => '18010 Granada',
-          'REAT'=>'A/GR/00385',
-          'url'=>'gloriasuitesgranada.com',
-          'site_id'=>3
-      ],
-      'rosa' => [
-          'name' => 'HOTEL ROSA DE ORO 3*',
-          'nif' => 'B19591205',
-          'address' => 'Cuesta San Gerónimo 23',
-          'phone' => '',
-          'zipcode' => '18010 Granada',
-          'REAT'=>'H/GR/01352',
-          'url'=>'www.hotelrosadeoro.es',
-          'site_id'=>2
       ],
       'other' => [
           'name' => '---',

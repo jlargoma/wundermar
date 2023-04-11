@@ -4,7 +4,6 @@ Route::group(['middleware' => 'authAdmin'], function () {
   
   Route::get('/partee-checkStatus/{id}', 'AppController@parteeCheckStatus');
   Route::get('/partee-getPDF/{id}', 'AppController@parteeGetPDF');
-  Route::get('admin/re_saveImg', 'ContentsControllers@re_saveImg');
   Route::get('admin/cambiarCostes', 'BookController@changeCostes');
   // Usuarios
   Route::get('admin/usuarios', 'UsersController@index');

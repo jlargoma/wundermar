@@ -3,7 +3,7 @@
   <div class="panel-heading">
     <div class="clearfix">
       <div class="col-xs-6">
-        <img src="{{url('/img/riad/logo_riad.png')}}" class="img-responsive">
+        <img src="{{url('/img/logo.png')}}" class="img-responsive">
         <div class="inv_numb"><?php echo $oInvoice->num ?></div>
         <b>
           <?php 
@@ -11,7 +11,7 @@
           echo convertDateToShow($f[0],true);
           ?>
         </b><br/>
-        <b>RIAD PUERTAS DEL ALBAICÍN, S.L.</b><br/>
+        <b>Wundermar, S.L.</b><br/>
         <?php
         if (trim($oInvoice->nif_business) != '') echo '<b>'. $oInvoice->nif_business .'</b><br/>';
         if (trim($oInvoice->address_business) != '') echo '<b>'. $oInvoice->address_business .'</b><br/>';

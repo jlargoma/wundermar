@@ -59,7 +59,6 @@ class Testing extends Command
       $fromMail = config('mail.from.address');
       $fromName = config('mail.from.name');
      $sended = Mail::raw('This is a test message', function($message) use ($fromMail,$fromName) {
-        //$message->from('reservas@riadpuertasdelalbaicin.com', 'Riad Puertas');
         $message->from($fromMail,$fromName);
         $message->to('pingodevweb@gmail.com');
         $message->subject('automatic control');

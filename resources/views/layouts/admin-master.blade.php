@@ -35,8 +35,8 @@
               type="text/css" media="screen">
         <link href="{{ assetV('/assets/plugins/jquery-metrojs/MetroJs.css') }}" rel="stylesheet" type="text/css"
               media="screen"/>
-        <link href="{{ assetV('/pages/css/pages-icons.css') }}" rel="stylesheet" type="text/css">
-        <link class="main-stylesheet" href="{{ assetV('/pages/css/pages.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ assetV('/css/pages-icons.css') }}" rel="stylesheet" type="text/css">
+        <link class="main-stylesheet" href="{{ assetV('/css/pages.css') }}" rel="stylesheet" type="text/css"/>
         <script src="//code.jquery.com/jquery.js"></script>
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
               integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -44,7 +44,7 @@
            <!--[if lte IE 9]>
         <link href="/assets/plugins/codrops-dialogFx/dialog.ie.css" rel="stylesheet" type="text/css" media="screen"/>
         <![endif]-->
-        <link rel="stylesheet" type="text/css" href="{{ assetV('/pages/css/custom.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ assetV('/css/custom.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ assetV('/css/custom-backend.css')}}">
 
         <script src="https://kit.fontawesome.com/922ed7fba7.js" crossorigin="anonymous"></script>
@@ -155,9 +155,9 @@
         <script src="{{ assetV('assets/plugins/jquery-sparkline/jquery.sparkline.min.js') }}" type="text/javascript"></script>
         <script src="{{ assetV('assets/plugins/skycons/skycons.js') }}" type="text/javascript"></script>
         <script src="{{ assetV('assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
-        <script type="text/javascript" src="{{ assetV('/pages/js/bootstrap-notify.js')}}"></script>
+        <script type="text/javascript" src="{{ assetV('/js/bootstrap-notify.js')}}"></script>
 
-        <script src="{{ assetV('pages/js/pages.min.js') }}"></script>
+        <script src="{{ assetV('js/pages.min.js') }}"></script>
         <script src="{{ assetV('js/custom.js') }}"></script>
         @yield('scripts')
         

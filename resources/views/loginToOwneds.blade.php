@@ -22,17 +22,17 @@
 		<link href="/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
 		<link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
 		<link href="/assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
-		<link href="/pages/css/pages-icons.css" rel="stylesheet" type="text/css">
-		<link class="main-stylesheet" href="/pages/css/pages.css" rel="stylesheet" type="text/css" />
+		<link href="/css/pages-icons.css" rel="stylesheet" type="text/css">
+		<link class="main-stylesheet" href="/css/pages.css" rel="stylesheet" type="text/css" />
 		<!--[if lte IE 9]>
-		<link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
+		<link href="css/ie9.css" rel="stylesheet" type="text/css" />
 		<![endif]-->
 		<script type="text/javascript">
 			window.onload = function()
 			{
 		// fix for windows 8
 		if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
-			document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="pages/css/windows.chrome.fix.css" />'
+			document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="css/windows.chrome.fix.css" />'
 		}
 		</script>
 		<?php  use App\Classes\Mobile;  $mobile = new Mobile(); ?>

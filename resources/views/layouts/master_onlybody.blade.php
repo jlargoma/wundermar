@@ -84,7 +84,7 @@
 
 	<!-- External JavaScripts
 	============================================= -->
-	<script type="text/javascript" src="{{ assetV('/pages/js/bootstrap-notify.js')}}"></script>
+	<script type="text/javascript" src="{{ assetV('/js/bootstrap-notify.js')}}"></script>
 	<script type="text/javascript" src="{{ assetV('/frontend/js/plugins.js') }}"></script>
 	<script type="text/javascript" src="{{ assetV('/frontend/js/functions.js') }}"></script>
 	<?php /* view para todos los scripts generales de la pagina*/ ?>

@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 use Mail;
 use Route;
 use URL;
-use App\Contents;
 use App\Sites;
 class HomeController extends AppController
 {
@@ -24,28 +23,7 @@ class HomeController extends AppController
     public function index(Request $request)
     {
         $host = $request->getHost();
-        if ($host == 'riad.virtual' || strpos($host,'admin.') !== false){
-          return redirect()->route('dashboard.planning');
-        }
-        global $is_mobile;
-        return $this->blog();
-        
-        $site = Sites::where('url',$host)->first();
-        if ($site){
-          $is_mobile = config('app.is_mobile');
-        
-          $oContents = new Contents();
-
-          $sliderHome = $oContents->getContentByKey('slider_home',false);
-          return view('frontend.home', [
-              'slidesEdificio' => null,
-              'is_mobile' => $is_mobile,
-              'sliderHome' => $sliderHome,
-              'edificio' => $oContents->getContentByKey('edificio',false)
-          ]);
-        }
-         return $this->blog();
-
+        return redirect()->route('dashboard.planning');
     }
 
     
@@ -167,76 +145,6 @@ class HomeController extends AppController
         return redirect('404');
         
     
-    }
-
-  
-    public function edificio()
-    {
-      
-      $aptos  = [];
-      
-      $oContents = new Contents();
-      
-      
-      $data = $oContents->getContentByKey('edificio_page',true);
-      $arraySlides = [];
-      for($i=0;$i<7;$i++){
-        if (isset($data['imagen_'.$i]) && trim($data['imagen_'.$i]) != '')
-        $arraySlides[] = url($data['imagen_'.$i]);
-      }
-      
-      $oPhotoHeader = \App\RoomsHeaders::where('url', 'edificio')->first();
-      $photoHeader = asset('/frontend/images/home/apart-bg.jpg');
-
-      if ($oPhotoHeader){
-        if (config('app.is_mobile')){
-          $aux = public_path().$oPhotoHeader->img_mobile;
-          if (is_file($aux)){
-            $photoHeader = $oPhotoHeader->img_mobile;
-          }
-        } else {
-          $aux = public_path().$oPhotoHeader->img_desktop;
-          if (is_file($aux)){
-            $photoHeader = $oPhotoHeader->img_desktop;
-          }
-        }
-      }
-      
-//         dd($arraySlides);
-      return view('frontend.pages.edificio',[
-          'data'     => $data,
-          'aptos'    => $aptos,
-          'isMobile' => config('app.is_mobile'),
-          'slides'      => $arraySlides,
-          'photoHeader' => $photoHeader,
-              ]);
-       
-   
-      
-      
-      
-      
-      $folder = '/img/miramarski/edificio/';
-      $slides = File::allFiles(public_path() . $folder);
-      if ($slides){
-       foreach ($slides as $key => $slide)
-        {
-            $arraySlides[] = $folder.$slide->getFilename();
-        }
-        natcasesort($arraySlides);
-      }
-      
-      
-     
-            
-        
-      return view('frontend.pages.edificio',[
-          'aptoHeading' => 'Edificio Miramar Ski',
-          'aptos'       => $aptos,
-          'photoHeader' => $photoHeader,
-          'slides'      => $arraySlides,
-          'isMobile'    => config('app.is_mobile'),
-              ]);
     }
 
     public function contacto()
@@ -729,31 +637,6 @@ class HomeController extends AppController
         }
     }
     
-    public function blog($name = null) {
-      
-      
-      $oContents = new Contents();
-      $data = $oContents->getContentByKey('blog',true);
-      if ($name){
-        $article = \App\Blog::where('name',$name)->where('status',1)->first();
-        if ($article){
-          $articles = \App\Blog::where('status',1)->where('id','!=',$article->id)->get();
-          return view('frontend/blog/article',['data'=> $data,'obj'=>$article,'lst_art'=>$articles]);
-        }
-      }
-      
-      
-      
-      $articles = \App\Blog::where('status',1)->get();
-      $excursions = \App\Excursions::where('status',2)->get();
-      
-      return view('frontend/blog/index',[
-          'data'     => $data,
-          'articles' => $articles,
-          'excursions' => $excursions,
-              ]);
-       
-    }
     
     
     public function checkPrices() {

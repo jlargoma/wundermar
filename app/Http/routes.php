@@ -442,15 +442,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 });
 
 Route::group(['middleware' => ['auth','role:admin|subadmin|recepcionista']], function () {
-
-  Route::get('admin/contents-home', 'ContentsControllers@index')->name('contents.index');
-  Route::get('admin/contents-home/{site}/{type?}', 'ContentsControllers@index')->name('contents.index');
-  Route::post('admin/contents-home/{site}/{type?}', 'ContentsControllers@update')->name('contents.upd');
-  
-  Route::get('admin/blogs/{id?}', 'ContentsControllers@blog')->name('contents.blog');
-  Route::post('admin/blogs/edit', 'ContentsControllers@blogUpdDescript')->name('contents.blog.edit');
-  
-  
   Route::post('admin/excursions/edit', 'ExcursionsControllers@save')->name('excursions.edit');
   Route::post('admin/excursions/delete', 'ExcursionsControllers@delete')->name('excursions.delete');
   Route::get('admin/excursions/gallery/{id?}', 'ExcursionsControllers@gallery')->name('excursions.gallery');
