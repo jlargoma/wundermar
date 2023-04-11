@@ -4,11 +4,11 @@
 
 @section('externalScripts') 
 <link href="/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
-<link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css"/>
+<link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css"/>
 <link rel="stylesheet" href="{{ asset('/assets/css/font-icons.css')}}" type="text/css"/>
 
-<script type="text/javascript" src="{{asset('/frontend/js/components/moment.js')}}"></script>
-<script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/moment.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/daterangepicker.js')}}"></script>
 <script type="text/javascript" src="{{ asset('/js/datePicker01.js')}}"></script>
 <script type="text/javascript">
   $(document).ready(function () {
@@ -67,7 +67,7 @@
         <div class="col-md-3">
           <label>Edificio</label>
           <select name="type" class="form-control">
-            <option value="riad" @if( $type == 'riad') selected @endif >Riad</option>
+            <option value="wundermar" @if( $type == 'wundermar') selected @endif >wundermar</option>
             <option value="rosa" @if( $type == 'rosa') selected @endif >Rosa D'Oro</option>
             <option value="gloria" @if( $type == 'gloria') selected @endif >Gloria</option>
           </select>

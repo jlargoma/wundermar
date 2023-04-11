@@ -114,8 +114,8 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript" src="{{asset('/frontend/js/components/moment.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/components/moment.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/components/daterangepicker.js')}}"></script>
     <script src="{{ asset('/assets/js/notifications.js') }}" type="text/javascript"></script>
     <script type="text/javascript">
         function showNotify(status, message, type){

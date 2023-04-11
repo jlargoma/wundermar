@@ -14524,3 +14524,9 @@ border-top: 2px solid #000;
     padding: 10px 5px;
   }
 }
+
+.login-container{
+  float: left;
+  background-color: rgba(0,0,0,0.1); 
+  padding-top: 15%;
+}

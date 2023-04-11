@@ -226,7 +226,7 @@ $lstSafetyBox = \App\SafetyBox::getNameList();
                              <i class="fa fa-paper-plane" aria-hidden="true"></i>
                           </button> 
                              <?php
-                              if(config('app.appl') == "riad"):
+                              if(config('app.appl') == "wundermar"):
                               $partee = $book->partee();
                               if ($partee):
                                 echo $partee->print_status($book->id,$book->start,$book->pax);

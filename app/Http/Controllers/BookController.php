@@ -108,7 +108,7 @@ class BookController extends AppController
         $mobile      = config('app.is_mobile');
         
         $alert_lowProfits = 0; //To the alert efect
-        $percentBenef     = DB::table('percent')->find(1)->percent;
+        $percentBenef     = 15;
         $lowProfits       = $this->lowProfitAlert($startYear, $endYear, $percentBenef, $alert_lowProfits);
 
         $ff_pendientes = Book::where('ff_status',4)->where('type_book','>',0)->count();

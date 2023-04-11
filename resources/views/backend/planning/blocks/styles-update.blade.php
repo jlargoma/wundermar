@@ -4,12 +4,12 @@
 <link href="/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css"
       media="screen">
 
-<link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css"/>
+<link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css"/>
 <link rel="stylesheet" href="{{ assetV('/css/backend/updateBooking.css')}}" type="text/css"/>
 <script type="text/javascript" src="{{ assetV('/js/backend/partee.js')}}"></script>
 
-<script type="text/javascript" src="{{asset('/frontend/js/components/moment.js')}}"></script>
-<script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/moment.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/daterangepicker.js')}}"></script>
 <script type="text/javascript" src="{{ assetV('/js/backend/buzon.js')}}"></script>
 <script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>
 <script src="/assets/js/notifications.js" type="text/javascript"></script>

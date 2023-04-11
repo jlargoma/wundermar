@@ -55,7 +55,7 @@
 </div>
 
 <link href="/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
-<link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css" />
+<link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css" />
 <script src="/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
 <script src="/assets/plugins/moment/moment.min.js"></script>
 <script type="text/javascript">

@@ -8,9 +8,9 @@
     <link href="/assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css" />
     <link href="/assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen" />
 
-	<link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('/assets/plugins/bootstrap-datepicker/css/datepicker3.css')}}" type="text/css" >
-    <link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css">
 @endsection
      
 @section('content')
@@ -1015,8 +1015,8 @@
    	<script type="text/javascript" src="/assets/plugins/datatables-responsive/js/lodash.min.js"></script>
 	<script src="/assets/plugins/moment/moment.min.js"></script>
 	
-	<script type="text/javascript" src="{{asset('/frontend/js/components/moment.js')}}"></script>
-	<script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/js/components/moment.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/js/components/daterangepicker.js')}}"></script>
 	
 	<script src="/assets/js/notifications.js" type="text/javascript"></script>
 

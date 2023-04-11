@@ -10108,7 +10108,9 @@ Responsive Util
   width: 496px;
   display: block;
   position: relative;
-  float: right;
+  float: left;
+  background-color: rgba(0,0,0,0.1); 
+  padding-top: 3em;
 }
 .login-wrapper .bg-caption {
   width: 500px;

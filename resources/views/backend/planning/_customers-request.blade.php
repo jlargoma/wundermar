@@ -9,7 +9,7 @@
       @if(count($items)>0)
       <div class="">
         <button type="button" class="btn filterSite active" data-key="0">Todos</button>
-        <button type="button" class="btn filterSite" data-key="1">RIAD</button>
+        <button type="button" class="btn filterSite" data-key="1">wundermar</button>
         <button type="button" class="btn filterSite" data-key="2">Rosa D'Oro</button>
         <button type="button" class="btn filterSite" data-key="5">Siloé Plaza</button>
       </div>

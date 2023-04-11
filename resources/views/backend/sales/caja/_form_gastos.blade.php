@@ -35,7 +35,7 @@
       <label for="type">Imputacion</label>
       <select class="form-control" id="site_id" name="site_id" style="width: 100%;" data-placeholder="Seleccione un tipo" required >
         <option value="0">Generíco</option>
-        <option value="1">Riad</option>
+        <option value="1">wundermar</option>
         <option value="2">Hotel Rosa D'Oro</option>
         <option value="3">Gloria</option>
       </select>

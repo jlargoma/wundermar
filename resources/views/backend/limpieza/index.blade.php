@@ -10,7 +10,7 @@ setlocale(LC_TIME, "es_ES");
 @section('title') Administrador de reservas @endsection
 
 @section('externalScripts')
-   <link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css" />
+   <link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css" />
     <link href="{{ assetV('/css/backend/planning.css')}}" rel="stylesheet" type="text/css" />
     
 
@@ -91,8 +91,8 @@ setlocale(LC_TIME, "es_ES");
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.3.0/js/dataTables.fixedColumns.min.js"></script>
 <script src="/assets/js/notifications.js" type="text/javascript"></script>
-<script type="text/javascript" src="{{asset('/frontend/js/components/moment.js')}}"></script>
-<script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/moment.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/daterangepicker.js')}}"></script>
 <script type="text/javascript" src="{{asset('/js/datePicker01.js')}}"></script>
 <script>
 $(document).ready(function () {

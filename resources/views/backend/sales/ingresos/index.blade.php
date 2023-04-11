@@ -449,7 +449,7 @@ $isMobile = $mobile->isMobile();
           ],
           datasets: [
           {
-            label: "RIAD",
+            label: "wundermar",
             borderColor: '#6d5cae',
             borderWidth: 1,
             fill: false,

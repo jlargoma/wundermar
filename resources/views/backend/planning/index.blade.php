@@ -15,7 +15,7 @@ $is_mobile = $mobile;
 
 <link href="/assets/css/font-icons.css" rel="stylesheet" type="text/css" />
 <link href="/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
-<link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css" />
+<link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css" />
 <link href="{{ assetV('/css/backend/planning.css')}}" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{{ assetV('/js/backend/partee.js')}}"></script>
 <script type="text/javascript" src="{{ assetV('/js/backend/buzon.js')}}"></script>
@@ -395,8 +395,8 @@ $is_mobile = $mobile;
 
   @section('scripts')
 
-  <script type="text/javascript" src="{{asset('/frontend/js/components/moment.js')}}"></script>
-  <script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.js')}}"></script>
+  <script type="text/javascript" src="{{asset('/js/components/moment.js')}}"></script>
+  <script type="text/javascript" src="{{asset('/js/components/daterangepicker.js')}}"></script>
 
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>

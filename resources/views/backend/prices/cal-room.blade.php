@@ -40,7 +40,7 @@
 </style>
 
 <!--<link href="/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
-<link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css" />-->
+<link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css" />-->
 @endsection
 
 @section('content')

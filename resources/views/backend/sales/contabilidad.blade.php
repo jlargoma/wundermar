@@ -371,14 +371,14 @@ $isMobile = $mobile->isMobile();
                 <div class="col-xs-4">
                   <div class="box">
                     <div class="sub-title">Ocupación Habitaciones</div>
-                    <h5>RIAD</h5>
+                    <h5>wundermar</h5>
                     <?php 
-                    $pieOcuRiad = 0;
-                    if ($dispBySite[1]['c']) $pieOcuRiad = round($dispBySite[1]['t']/$dispBySite[1]['c']);
+                    $pieOcuwundermar = 0;
+                    if ($dispBySite[1]['c']) $pieOcuwundermar = round($dispBySite[1]['t']/$dispBySite[1]['c']);
                     ?>
                     <div class="circle-percent">
-                      <canvas id="pieOcuRiad" style="width: 100%; height: 170px;"></canvas>
-                      <span>{{$pieOcuRiad}} %</span>
+                      <canvas id="pieOcuwundermar" style="width: 100%; height: 170px;"></canvas>
+                      <span>{{$pieOcuwundermar}} %</span>
                     </div>
                   </div>
                 </div>
@@ -480,7 +480,7 @@ $isMobile = $mobile->isMobile();
         ],
         datasets: [
           {
-            label: "RIAD",
+            label: "wundermar",
             borderColor: '#6d5cae',
             borderWidth: 1,
             fill: false,
@@ -602,7 +602,7 @@ $isMobile = $mobile->isMobile();
           ],
           datasets: [
           {
-            label: "RIAD",
+            label: "wundermar",
             borderColor: '#6d5cae',
             borderWidth: 1,
             fill: false,
@@ -669,13 +669,13 @@ $isMobile = $mobile->isMobile();
       });
 
   
-    new Chart(document.getElementById("pieOcuRiad"), {
+    new Chart(document.getElementById("pieOcuwundermar"), {
         type: 'doughnut',
         data: {
             labels: ["Ocupac",'Libre'],
             datasets: [{
                 label: '',
-                data: [{{$pieOcuRiad}},{{100-$pieOcuRiad}}],
+                data: [{{$pieOcuwundermar}},{{100-$pieOcuwundermar}}],
                 backgroundColor: ['rgba(159, 90, 253, 1)'],
                 borderColor: ['rgba(255, 255, 255 ,1)',],
                 borderWidth: 2

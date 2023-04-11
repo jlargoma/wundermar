@@ -1,7 +1,7 @@
 <?php use \Carbon\Carbon;  setlocale(LC_TIME, "ES"); setlocale(LC_TIME, "es_ES"); ?>
-<link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css" />
+<link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css" />
 <link rel="stylesheet" href="{{ asset('/assets/plugins/bootstrap-datepicker/css/datepicker3.css')}}" type="text/css" >
-<link rel="stylesheet" href="{{ asset('/frontend/css/components/daterangepicker.css')}}" type="text/css">
+<link rel="stylesheet" href="{{ asset('/css/components/daterangepicker.css')}}" type="text/css">
 
 
 <div class="row">
@@ -38,8 +38,8 @@
 
 
 <script src="/assets/plugins/moment/moment.min.js"></script>
-<script type="text/javascript" src="{{asset('/frontend/js/components/moment.js')}}"></script>
-<script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/moment.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/daterangepicker.js')}}"></script>
 
 <script type="text/javascript">
   $(document).ready(function () {

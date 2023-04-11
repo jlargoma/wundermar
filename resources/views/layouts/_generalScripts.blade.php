@@ -6,8 +6,8 @@
 
 <script type="text/javascript" src="{{ asset('/js/flip.min.js')}}"></script>
 
-<script type="text/javascript" src="{{asset('/frontend/js/components/moment.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/moment.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/daterangepicker.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('/frontend/js/aos/2.1.1/aos.js')}}"></script>
 
 <script type="text/javascript" src="{{asset('/frontend/js/jquery.flip/1.1.2/jquery.flip.min.js')}}"></script>

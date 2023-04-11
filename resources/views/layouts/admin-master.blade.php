@@ -4,7 +4,7 @@
 
         <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
         <meta charset="utf-8"/>
-        <title>RIAD - @yield('title')</title>
+        <title>wundermar - @yield('title')</title>
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
         <meta name="TWpUeE0zeDhNZkQ2STF3ZU1mVHhjcT0y" value="1003272df3af89e0ab299138ff66db15"/>
@@ -51,26 +51,26 @@
             <style>
         <?php 
         
-        if (config('app.appl') == "riad"): ?>
-               .showOnlyRiad{
+        if (config('app.appl') == "wundermar"): ?>
+               .showOnlywundermar{
                  visibility:visible;
                }
-               .hiddenOnlyRiad{
+               .hiddenOnlywundermar{
                 visibility:hidden;
                 display: none !important;
                }
             <?php else:?>
-              .showOnlyRiad{
+              .showOnlywundermar{
                  visibility:hidden;
                }
             <?php endif; ?>
         </style>
     </head>
     <body class="fixed-header   windows desktop pace-done sidebar-visible menu-pin" style="padding-top:0px!important">
-            <nav class="navbar navbar-inverse" role="navigation" style="<?php if (config('app.appl') == "riad"): ?>background-color: #6d5cae!important; <?php else:?> background-color: #295d9b!important;<?php endif; ?>">
-            <?php if (config('app.appl') == "riad"): ?>
+            <nav class="navbar navbar-inverse" role="navigation" style="<?php if (config('app.appl') == "wundermar"): ?>background-color: #6d5cae!important; <?php else:?> background-color: #295d9b!important;<?php endif; ?>">
+            <?php if (config('app.appl') == "wundermar"): ?>
                 <a class="navbar-brand" href="{{ route('dashboard.planning') }}" style="max-width: 155px;">
-                    <img src="{{ assetV('img/riad/logo_riad_b.png') }}" alt="" style="width: 100%">
+                    <img src="{{ assetV('img/wundermar/logo_wundermar_b.png') }}" alt="" style="width: 100%">
                 </a>
             <?php else:?>
                 <a class="navbar-brand" href="{{ route('dashboard.planning') }}" style="max-width: 155px;">
@@ -84,7 +84,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="navbar-collapse collapse" style="<?php if (config('app.appl') == "riad"): ?>background-color: #6d5cae!important; <?php else:?> background-color: #295d9b!important;<?php endif; ?>">
+            <div class="navbar-collapse collapse" style="<?php if (config('app.appl') == "wundermar"): ?>background-color: #6d5cae!important; <?php else:?> background-color: #295d9b!important;<?php endif; ?>">
                @include('layouts._nav_links')
                 <ul class="nav navbar-nav navbar-right">
                     <li style="color:white"><a href="#"

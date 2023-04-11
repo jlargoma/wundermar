@@ -1,7 +1,7 @@
 <?php $mobile = new \App\Classes\Mobile(); ?>
 
 <link href="{{ asset('/frontend/hover.css')}}" rel="stylesheet" media="all">
-<link rel="stylesheet" href="{{ asset('/frontend/css/components/radio-checkbox.css')}}" type="text/css" />
+<link rel="stylesheet" href="{{ asset('/css/components/radio-checkbox.css')}}" type="text/css" />
 
 <div class="modal-header clearfix text-left">
     <div class="row">
@@ -89,9 +89,9 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="{{asset('/frontend/js/components/moment.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/moment.js')}}"></script>
 <script type="text/javascript" src="{{ asset('/frontend/js/form_booking.js')}}"></script>
-<script type="text/javascript" src="{{asset('/frontend/js/components/daterangepicker.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/components/daterangepicker.js')}}"></script>
 <script type="text/javascript" src="{{ asset('/js/datePicker01.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
