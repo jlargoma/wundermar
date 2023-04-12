@@ -176,7 +176,7 @@ $isMobile = $mobile->isMobile()
                   <img src="/pages/<?php echo strtolower($book->getAgency($book->agency)) ?>.png" class="img-agency" />
                 <?php endif ?>
                 <?php if (!empty($book->book_owned_comments) && $book->promociones != 0): ?>
-                  <img src="/pages/oferta.png" class="img-oferta" title="<?php echo $book->book_owned_comments ?>">
+                  <img src="/img/oferta.png" class="img-oferta" title="<?php echo $book->book_owned_comments ?>">
                   <?php endif ?>
                   <a class="update-book" data-id="<?php echo $book->id ?>"  title="Editar Reserva"  href="{{url ('/admin/reservas/update')}}/<?php echo $book->id ?>">
                   <?php echo $book->customer->name ?>

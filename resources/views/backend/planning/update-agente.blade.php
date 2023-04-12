@@ -105,16 +105,16 @@ $mobile = new Mobile();
           @if( url()->previous() != "" )
           @if( url()->previous() == url()->current() )
           <a href="{{ url('/admin/reservas') }}" class=" m-b-10" style="min-width: 10px!important">
-            <img src="{{ asset('/img/iconos/close.png.png') }}" style="width: 20px"/>
+            <img src="{{ asset('/img/icons/close.png') }}" style="width: 20px"/>
           </a>
           @else
           <a href="{{ url()->previous() }}" class=" m-b-10" style="min-width: 10px!important">
-            <img src="{{ asset('/img/iconos/close.png.png') }}" style="width: 20px"/>
+            <img src="{{ asset('/img/icons/close.png') }}" style="width: 20px"/>
           </a>
           @endif
           @else
           <a href="{{ url('/admin/reservas') }}" class=" m-b-10"  style="min-width: 10px!important">
-            <img src="{{ asset('/img/iconos/close.png.png') }}" style="width: 20px"/>
+            <img src="{{ asset('/img/icons/close.png') }}" style="width: 20px"/>
           </a>
           @endif
 

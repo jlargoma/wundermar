@@ -13,7 +13,7 @@
 	<div class="col-xs-3 padding-10">
 
 	    <a class="close" data-dismiss="modal" aria-hidden="true" style="min-width: 10px!important;padding: 25px">
-	        <img src="{{ asset('/img/iconos/close.png.png') }}" style="width: 20px" />
+	        <img src="{{ asset('/img/icons/close.png') }}" style="width: 20px" />
 	    </a>
 	</div>
 	<div class="col-xs-12">

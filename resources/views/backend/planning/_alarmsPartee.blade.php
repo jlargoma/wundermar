@@ -237,7 +237,7 @@ $isMobile = config('app.is_mobile');
               <td class="text-center">
   <?php if ($book->promociones > 0): ?>
                   <span class="icons-comment" data-class-content="content-commentOwned-<?php echo $book->id ?>">
-                    <img src="/pages/oferta.png" style="width: 40px;">
+                    <img src="/img/oferta.png" style="width: 40px;">
                   </span>
                   <div class="comment-floating content-commentOwned-<?php echo $book->id ?>" style="display: none;"><p class="text-left"><?php echo $book->book_owned_comments ?></p></div>
 

@@ -20,7 +20,7 @@ $total_pvp  = 0;
                     <?php  echo $book->customer->name ?>
                 </a>
                 <?php if (!empty($book->book_owned_comments) && $book->promociones != 0 ): ?>
-                    <img src="/pages/oferta.png" class="img-oferta" title="<?php echo $book->book_owned_comments ?>">
+                    <img src="/img/oferta.png" class="img-oferta" title="<?php echo $book->book_owned_comments ?>">
                 <?php endif ?>
         </td>
       @if($isMobile)

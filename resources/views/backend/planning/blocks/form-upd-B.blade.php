@@ -97,7 +97,7 @@ $disabl_limp = ($uRole == "limpieza") ? 'disabled' : '';
 
 <?php if ($book->book_owned_comments != "" && $book->promociones != 0): ?>
     <div class="col-md-2 col-xs-6 push-10 content_image_offert">
-      <img src="/pages/oferta.png" style="width: 90px;">
+      <img src="/img/oferta.png" style="width: 90px;">
     </div>
 <?php endif ?>
  </div>
