@@ -1,5 +1,5 @@
 .navbar-collapse.collapse, .navbar.navbar-inverse,.navbar-inverse {
-  background-color: #295d9b!important;
+  background-color: #004a2f!important;
 }
 
 .font-s12{
@@ -183,8 +183,8 @@ input.beneficio{
 }
 
 .pendientes span.bagde{
-  color: #295d9b; 
-  border: 1px solid #295d9b;
+  color: #004a2f; 
+  border: 1px solid #004a2f;
 }
 .especiales span.bagde{
   color: #ffa500; 
@@ -507,7 +507,7 @@ input.beneficio,
 }
 
 .selectCash.selected{
-  border: 2px solid #48b0f7;
+  border: 2px solid #1f7b00;
   line-height: 1;
   padding: 10px 15px;
 }
@@ -598,7 +598,7 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
   float: left;
   padding: 5px 9px;
   margin: 4px;
-  background-color: #295d9b;
+  background-color: #004a2f;
   color: #fff;
   border-radius: 17px;
   min-width: 5.5em;
@@ -607,7 +607,7 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
 }
 .month_select.active,
 .month_select:hover{
-  background-color: #9b59ff;
+  background-color: #328f13;
   color: initial;
 
 }
@@ -695,7 +695,7 @@ button.btn-pdf{
   padding: 0;
 }
 .form-photo{
-  border: 1px solid #6d5cae;
+  border: 1px solid #004a2f;
   padding: 1em;
   text-align: center;
 }

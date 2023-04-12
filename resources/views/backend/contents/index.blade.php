@@ -29,7 +29,7 @@ setlocale(LC_TIME, "es_ES"); ?>
   }
   
 li.link a {
-    background-color: #6d5cae;
+    background-color: #004a2f;
     color: #FFF;
     font-weight: bold;
 }

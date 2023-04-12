@@ -291,7 +291,7 @@ $(document).ready(function () {
 <style>
 
   .show-comment:hover{
-    background-color: #6d5cae;
+    background-color: #004a2f;
   }
   .show-comment:hover .comment-floating{
     display: block !important;

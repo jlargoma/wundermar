@@ -246,7 +246,7 @@ div#modalNewBook {
   text-align: center;
 }
 #modalPAXs .table tbody tr th{
-    background-color: #6d5cae;
+    background-color: #004a2f;
     color: #FFF;
 }
 button.btn.btn-danger.removeAlertPax {
@@ -446,7 +446,7 @@ span.pay-icon.paid {
 }
 .planning_tables .pendientes{
   color: #FFF !important;
-  background-color: #295d9b !important;
+  background-color: #004a2f !important;
 }
 .planning_tables .reservadas{
   background-color: #53ca57 !important;
@@ -465,7 +465,7 @@ span.pay-icon.paid {
 }
 .planning_tables .checkout{
   color: #FFF !important;
-  background-color: #6d5cae !important;
+  background-color: #004a2f !important;
 }
 .planning_tables .blocked-ical{
   color: #402f2f !important;

@@ -74,7 +74,7 @@ a.see_more {
 span.mobile#loadchatbox {
   display: block;
   float: none;
-  background-color: #6d5cae;
+  background-color: #004a2f;
   margin-top: 1em;
 }
 .btn-tables.btn-blink{    
@@ -145,7 +145,7 @@ td.text-center.pay-status-error {
 }
 
 .table.liq-agencia thead{
-  background-color: #48b0f7;
+  background-color: #1f7b00;
   text-align: center;
 }
 .table.liq-agencia thead th{
@@ -230,7 +230,7 @@ button#refreshFilters {
   font-size: 1.2em;
   width: 35px;
   margin-right: 1px;
-  background-color: #51b1f7;
+  background-color: #328f13;
   color: #fff;
 }
 button#filterByRange {
@@ -339,7 +339,7 @@ input#dateRangefilter {
   text-align: left;
 }
 .chat-item .status .chat-text{
-  color: #295d9b;
+  color: #004a2f;
   border-radius: 14px;
   padding: 5px 12px;
   font-weight: 800;
@@ -403,7 +403,7 @@ input#dateRangefilter {
   width: 100%; 
 }
 .btn-contabilidad button.active{
-  background-color: #6600ff;
+  background-color: #328f13;
   pointer-events: none
 }
 
@@ -469,10 +469,10 @@ div#box_msg_lst {
 
 
 .resume-head{
-  background-color: #51b1f7;
+  background-color: #328f13;
 }
 .resume-head th {
-  background-color: #51b1f7;
+  background-color: #328f13;
   color: #fff !important;
   min-width: 75px;
   text-align: center;
@@ -485,7 +485,7 @@ div#box_msg_lst {
 .table-resumen th.static{
   position: absolute;
   height: 42px;
-  background-color: #51b1f7;
+  background-color: #328f13;
   padding: 10px !important;
   margin: 5px auto;
 }
@@ -530,7 +530,7 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end.prices:hover table.t-ota
   display: table;
 }
 a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end.prices p.min-estanc {
-    color: #6d5cae;
+    color: #004a2f;
 }
 .fc-dayGrid-view .fc-body .fc-row{
   min-height: 105px;
@@ -541,7 +541,7 @@ table.t-otas {
     left: 0;
     width: 100%;
     background-color: #fafafa !important;
-    border: 2px solid #6d5cae !important;
+    border: 2px solid #004a2f !important;
     display: none;
 }
 a.prices:hover{
@@ -654,7 +654,7 @@ input.total, input.cost, input.beneficio, input.costApto, input.costParking {
   text-align: center;
 }
 .row.roomsList.header-list{
-  background-color: #6d5cae;
+  background-color: #004a2f;
   color: #fff;
 }
 .row.roomsList .site-name{
@@ -743,7 +743,7 @@ div#paymentDataContent a {
 .table-resumen th.static{
   position: absolute;
   height: 42px;
-  background-color: #51b1f7;
+  background-color: #328f13;
   padding: 10px !important;
   margin: 5px auto;
 }
@@ -761,10 +761,10 @@ div#paymentDataContent a {
   padding-left: 130px !important;
 }
 .resume-head{
-  background-color: #51b1f7;
+  background-color: #328f13;
 }
 .resume-head th {
-  background-color: #51b1f7;
+  background-color: #328f13;
   color: #fff !important;
   min-width: 75px;
   text-align: right;
@@ -932,7 +932,7 @@ icon {
   th.static {
     position: absolute;
     height: 5em;
-    background-color: #51b1f7;
+    background-color: #328f13;
     padding: 31px !important;
     margin: 5px auto;
   }

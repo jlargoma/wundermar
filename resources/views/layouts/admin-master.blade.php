@@ -67,7 +67,7 @@
         </style>
     </head>
     <body class="fixed-header   windows desktop pace-done sidebar-visible menu-pin" style="padding-top:0px!important">
-            <nav class="navbar navbar-inverse" role="navigation" style="<?php if (config('app.appl') == "wundermar"): ?>background-color: #6d5cae!important; <?php else:?> background-color: #295d9b!important;<?php endif; ?>">
+            <nav class="navbar navbar-inverse" role="navigation" style="<?php if (config('app.appl') == "wundermar"): ?>background-color: #004a2f!important; <?php else:?> background-color: #004a2f!important;<?php endif; ?>">
                 <a class="navbar-brand" href="{{ route('dashboard.planning') }}" style="max-width: 155px;">
                     <img src="{{ assetV('img/logo.png') }}" alt="" style="width: 100%">
                 </a>
@@ -78,7 +78,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="navbar-collapse collapse" style="<?php if (config('app.appl') == "wundermar"): ?>background-color: #6d5cae!important; <?php else:?> background-color: #295d9b!important;<?php endif; ?>">
+            <div class="navbar-collapse collapse" style="<?php if (config('app.appl') == "wundermar"): ?>background-color: #004a2f!important; <?php else:?> background-color: #004a2f!important;<?php endif; ?>">
                @include('layouts._nav_links')
                 <ul class="nav navbar-nav navbar-right">
                     <li style="color:white"><a href="#"

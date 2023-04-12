@@ -1,6 +1,6 @@
 <style>
   .buttons-lst .active{
-    color: #6d5cae !important;
+    color: #004a2f !important;
     border: 1px solid;
   }
   .buttons-lst a.text-white{

@@ -83,7 +83,7 @@
     margin-right: 1em;
 }
   .tabRooms {
-    background-color: #6d5cae;
+    background-color: #004a2f;
     display: inline-block;
     padding: 7px 14px;
     border-radius: 2px;
@@ -95,12 +95,12 @@
     margin-bottom: 1em;
 }
  span.tabRooms.active {
-    color: #6d5cae;
+    color: #004a2f;
     background-color: #FFF;
-    border: 1px solid #6d5cae;
+    border: 1px solid #004a2f;
 }
  .tb-promotions th {
-    background-color: #48b0f7;
+    background-color: #1f7b00;
     color: #FFFFFF !important;
 }
 .tb-promotions .table tbody tr td {

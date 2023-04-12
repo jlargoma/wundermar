@@ -14,7 +14,7 @@
         top: -160px;
         right: 0px;
         height: 100px;
-        background-color: #295d9b;
+        background-color: #004a2f;
         text-align: center;
         color: #fff;
       }
@@ -60,7 +60,7 @@
       }
 
       table.table .header{
-        background-color: #48b0f7;
+        background-color: #1f7b00;
 
       }
       .text-center{

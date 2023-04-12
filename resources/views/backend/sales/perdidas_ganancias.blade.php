@@ -75,7 +75,7 @@ $isMobile = config('app.is_mobile');
     min-height: 5em;
   }
   .light-blue{
-    background-color: #48b0f7
+    background-color: #1f7b00
   }
   input.inputIngr {
     width: 7em;
@@ -94,7 +94,7 @@ $isMobile = config('app.is_mobile');
     cursor: pointer;
   }
   td.open_detail:hover {
-    color: #295d9b;
+    color: #004a2f;
   }
 </style>
 @endsection

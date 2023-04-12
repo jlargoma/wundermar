@@ -40,7 +40,7 @@
             color: white;
         }
         .active.res{
-            background-color: #295d9b !important; 
+            background-color: #004a2f !important; 
         }
         .active.bloq{
             background-color: orange !important; 
@@ -101,7 +101,7 @@
     cursor: pointer;
 }
         li.btn-nav.active {
-    background-color: #51b1f7;
+    background-color: #328f13;
 }
     </style>
 @endsection

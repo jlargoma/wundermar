@@ -278,7 +278,7 @@
   .tIngrMes thead th,
   .tableTrimestres th{
     color: #FFF !important;
-    background-color: #48b0f7;
+    background-color: #1f7b00;
     text-align: center;
   }
   .table.tableTrimestres tr th{

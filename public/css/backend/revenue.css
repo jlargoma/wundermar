@@ -29,7 +29,7 @@ and open the template in the editor.
 
 
 .tab-channels {
-  background-color: #6d5cae;
+  background-color: #004a2f;
   display: inline-block;
   padding: 7px 14px;
   border-radius: 2px;
@@ -38,12 +38,12 @@ and open the template in the editor.
 }
 .tab-channels.active {
   font-weight: 800;
-  background-color: #51b1f7;
+  background-color: #328f13;
 }
 .summary{
   max-width: 560px;
-  box-shadow: 1px 1px 8px #6d5cae;
-  /* background-color: #6d5cae5c; */
+  box-shadow: 1px 1px 8px #004a2f;
+  /* background-color: #004a2f5c; */
   margin-bottom: 1em;
   padding: 7px;
   margin-top: 7px;
@@ -57,7 +57,7 @@ td.editable.tSelect {
   margin-right: 1em;
 }
 .tabChannels {
-  background-color: #6d5cae;
+  background-color: #004a2f;
   display: inline-block;
   padding: 7px 14px;
   border-radius: 2px;
@@ -67,7 +67,7 @@ td.editable.tSelect {
 }
 .tabChannels.active {
   font-weight: 800;
-  background-color: #51b1f7;
+  background-color: #328f13;
 }
 .c-pickup .summary{
   float: right;
@@ -81,7 +81,7 @@ td.editable.tSelect {
 }
 
 .table-vta-agenc thead tr th {
-    background-color: #6d5cae;
+    background-color: #004a2f;
     color: #FFF !important;
     border: 1px solid;
     text-align: center;

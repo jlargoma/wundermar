@@ -18,7 +18,7 @@
     margin-top: 1em;
     font-size: 16px;
     color: #FFF;
-    background-color: #2a5d9b;
+    background-color: #004a2f;
     font-weight: 800;
   }
   .contentOtaPrices .box {
@@ -32,13 +32,13 @@
     font-weight: bold;
   }
   .contentOtaPrices span.admin {
-    color: #2a5d9b;
+    color: #004a2f;
     font-weight: bold;
   }
   .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus,
   .nav-tabs > li > a:hover, .nav-tabs > li > a:focus{
-    background-color: #295d9b;
-    border-color: #295d9b;
+    background-color: #004a2f;
+    border-color: #004a2f;
   }
   #myTab a{
     font-weight: 800;

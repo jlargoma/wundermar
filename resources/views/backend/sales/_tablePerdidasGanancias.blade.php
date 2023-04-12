@@ -117,7 +117,7 @@
     color: #fff;
   }
   .perdidas_ganancias .pendientes{
-    background-color: #48b0f7;
+    background-color: #1f7b00;
   }
   .table.perdidas_ganancias td,
   .table.perdidas_ganancias th{

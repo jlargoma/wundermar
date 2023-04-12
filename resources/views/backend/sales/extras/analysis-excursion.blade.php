@@ -107,7 +107,7 @@ $totals = [
  
 <style>
   .table tbody tr.totals td{
-    background-color: #51b1f7;
+    background-color: #328f13;
     font-weight: 600;
     color: #FFF;
   }

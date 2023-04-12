@@ -34,10 +34,10 @@ background-color: #eaeaea;
     box-shadow: 1px 1px 8px #bdbdbd;
 }
 h1{
-  background-color: #295d9b;
+  background-color: #004a2f;
     color: #dfe6ef;
     padding: 7px;
-    box-shadow: 1px 1px 3px #295d9b;
+    box-shadow: 1px 1px 3px #004a2f;
     margin-bottom: 0.7em;
     margin-top: 7px;
 }

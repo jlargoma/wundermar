@@ -58,7 +58,7 @@ $('button#booking_agency_details').click(function(){
               $.each(seasons,function(season,data){
                   agencyBookHTML += '<td>'+formatNumber(toFixed(data.total,0))+' €</td><td>'+toFixed(data.total_rate,0)+' %</td><td>'+formatNumber(data.reservations)+'</td><td>'+toFixed(data.reservations_rate,0)+' %</td><td>'+formatNumber(toFixed(data.commissions,0))+' €</td>';
                   if (a>0){
-                    agencyBookHTML += '<td style="background-color:#48b0f7;"></td>';
+                    agencyBookHTML += '<td style="background-color:#1f7b00;"></td>';
                   }
                   a--;
               });
@@ -77,7 +77,7 @@ $('button#booking_agency_details').click(function(){
                 agencyBookHTML += '<td>'+aux.reservations+'</td><td>-</td>';
                 agencyBookHTML += '<td>'+formatNumber(aux.commissions,0)+'</td>';
                  if (a>0){
-                    agencyBookHTML += '<td style="background-color:#48b0f7;"></td>';
+                    agencyBookHTML += '<td style="background-color:#1f7b00;"></td>';
                   }
                   a--;
               }

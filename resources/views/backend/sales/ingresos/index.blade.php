@@ -22,7 +22,7 @@ $isMobile = $mobile->isMobile();
     tr.text-center.contab-site td{
       color: #fff;
       font-weight: 600;
-      background-color: #6d5cae;
+      background-color: #004a2f;
     }
     tr.text-center.contab-ch {
       color: blue;
@@ -64,7 +64,7 @@ $isMobile = $mobile->isMobile();
     }
     .table th.static-2 {
       height: 42px;
-      background-color: #51b1f7;
+      background-color: #328f13;
       padding: 10px !important;
       margin: 5px auto;
       border-right: none;
@@ -450,7 +450,7 @@ $isMobile = $mobile->isMobile();
           datasets: [
           {
             label: "wundermar",
-            borderColor: '#6d5cae',
+            borderColor: '#004a2f',
             borderWidth: 1,
             fill: false,
             data: [{{$totalYearSite[1]}}],
@@ -515,7 +515,7 @@ $isMobile = $mobile->isMobile();
     data: {
       labels: [<?php foreach($siteRooms as $site => $data) echo '"' . $data['t'] . '",'; ?>],
       datasets: [{
-          backgroundColor: ["#6d5cae", "red",'green'],
+          backgroundColor: ["#004a2f", "red",'green'],
           data: [<?php foreach($siteRooms as $site => $data) echo "'" .round($data['months'][0]). "',"; ?>]
         }]
     },

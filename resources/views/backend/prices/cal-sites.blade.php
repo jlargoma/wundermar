@@ -544,7 +544,7 @@ $(document).ready(function () {
 
 
   #table_prices.table-resumen tr.room-name th {
-    background-color: #7a6bb3 !important;
+    background-color: #1f7b00 !important;
     color: #fff;
     min-height: 65px;
     border: none !important;
@@ -552,7 +552,7 @@ $(document).ready(function () {
     width: 19em;
   }
   #table_prices.table-resumen tr.room-name td {
-    background-color: #7a6bb3 !important;
+    background-color: #1f7b00 !important;
     color: #fff;
     min-height: 65px;
     border: none !important;
@@ -591,7 +591,7 @@ $(document).ready(function () {
     position: -webkit-sticky; /* for Safari */
     position: sticky;
     top: 0;
-    background: #6d5cae;
+    background: #004a2f;
     color: #FFF;
     z-index: 10;
     text-align: center;
@@ -617,7 +617,7 @@ $(document).ready(function () {
   }
 
   table#table_prices tbody th.room-name.static.static-header {
-    background-color: #7a6bb3 !important;
+    background-color: #1f7b00 !important;
   }
   table#table_prices tbody th.room-name.mobile.static.static-header{
     z-index: 3;

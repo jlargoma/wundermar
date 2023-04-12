@@ -203,7 +203,7 @@ $(document).ready(function () {
       margin: 0em auto;
     }
 a.active {
-    background-color: #6d5cae;
+    background-color: #004a2f;
     color: #FFF;
     font-weight: bold;
 }
@@ -234,8 +234,8 @@ h3.subtit{
     ul.tabs-btn li {
       list-style: none;
       display: inline-block;
-      border:1px solid #6d5cae;
-      color: #6d5cae;
+      border:1px solid #004a2f;
+      color: #004a2f;
       padding: 3px 14px;
       margin: 0 1px;
       border-radius: 5px;
@@ -243,7 +243,7 @@ h3.subtit{
           width: 90px;
     }
     ul.tabs-btn li.active {
-      background-color: #6d5cae;
+      background-color: #004a2f;
       color: #fff;
     }
   </style>

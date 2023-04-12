@@ -20,7 +20,7 @@ setlocale(LC_TIME, "es_ES");
   }
   #limpieza_summ th{
     text-align: center;
-    background-color: #48b0f7;
+    background-color: #1f7b00;
     color: #FFF;
   }
   #limpieza_summ td{

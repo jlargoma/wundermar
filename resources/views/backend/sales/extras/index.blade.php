@@ -20,7 +20,7 @@ setlocale(LC_TIME, "es_ES");
     }
  
   #tableItems tr.extr_header {
-    background-color: #6d5cae;
+    background-color: #004a2f;
     color: #fff;
 }
 

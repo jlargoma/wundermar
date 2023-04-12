@@ -331,7 +331,7 @@ foreach ($aSites as $k=>$v) $aSites2[$k] = $v;
     padding: 30px 11px;
 }
 button.btn.btn-load {
-    background-color: #6d5cae;
+    background-color: #004a2f;
     color: #FFF;
 }
 #cargaCostesFijos .table tbody tr td {

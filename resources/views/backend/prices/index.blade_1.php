@@ -144,7 +144,7 @@
   h2.mobile-tit {
     padding: 7px 11px;
     margin: 8px auto 19px;
-    background-color: rgba(72, 134, 210, 0.3);
+    background-color: #328f13;
     font-size: 1.4em;
     box-shadow: 1px 3px 2px #00132b;
     font-weight: 600;

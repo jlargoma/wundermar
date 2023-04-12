@@ -1,12 +1,12 @@
 <style>
   .btn-primary{
-    background-color: #295d9b!important;
+    background-color: #004a2f!important;
   }
   .btn-sub-menu{
     display: inline-block;
   }
   .btn-sub-menu .active{
-    background-color: #6d5cae;
+    background-color: #004a2f;
     box-shadow: 1px 2px 1px #51457f;
     border: 1px solid #5a42b3;
   }
@@ -28,7 +28,7 @@ $lstBtn = [
     'revenue.pickUp'=>'PICK UP',
     'revenue.daily'=>'X Día',
     'revenue.disponibilidad'=>'DISPONIBLIDAD x ALOJAMIENTO',
-    'revenue.sales'=>'INFORMES EMPLEADOS',
+    //'revenue.sales'=>'INFORMES EMPLEADOS',
     'pyg'=>'CTA P&G',
 ];
 

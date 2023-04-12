@@ -122,7 +122,7 @@ sendFormRevenue();
     }
 
     .tabChannels {
-        background-color: #6d5cae;
+        background-color: #004a2f;
         display: inline-block;
         padding: 7px 14px;
         border-radius: 2px;
@@ -132,7 +132,7 @@ sendFormRevenue();
     }
     .tabChannels.active {
         font-weight: 800;
-        background-color: #51b1f7;
+        background-color: #328f13;
     }
     input.editable {
         width: 25px;
@@ -151,8 +151,8 @@ sendFormRevenue();
     .summary-month .s-green{background-color: #beffbe;}
     
     .select_site{
-      background: #6d5cae;
-      border-color: #6d5cae;
+      background: #004a2f;
+      border-color: #004a2f;
     }
     
     @media only screen and (max-width: 768px){

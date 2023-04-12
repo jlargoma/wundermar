@@ -24,7 +24,7 @@ setlocale(LC_TIME, "es_ES");
   #tableInvoices thead th{
         color: #FFF;
     text-align: center;
-    background-color: #48b0f7;
+    background-color: #1f7b00;
   }
   #tableInvoices thead th::after{
     content: none !important;

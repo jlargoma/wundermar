@@ -32,7 +32,7 @@
 }
 
 .competitor td {
-    background-color: #6d5cae !important;
+    background-color: #004a2f !important;
     color: #FFF;
     font-size: 1.5em !important;
     text-align: left !important;

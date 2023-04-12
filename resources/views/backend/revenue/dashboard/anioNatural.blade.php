@@ -66,7 +66,7 @@ th.btn_anio {
 }
 .table.tableBtn th.btn_anio.active,
 .table.tableBtn th.btn_anio:hover {
-  background-color: #6d5cae;
+  background-color: #004a2f;
     color: #FFF;
 }
 select#selTrim {

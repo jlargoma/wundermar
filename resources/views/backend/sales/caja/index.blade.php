@@ -23,7 +23,7 @@ $isMobile = $mobile->isMobile();
     tr.text-center.contab-site td{
       color: #fff;
       font-weight: 600;
-      background-color: #6d5cae;
+      background-color: #004a2f;
     }
     tr.text-center.contab-ch {
         color: blue;

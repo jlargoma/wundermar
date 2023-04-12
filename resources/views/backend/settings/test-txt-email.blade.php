@@ -51,8 +51,8 @@ and open the template in the editor.
       }
       ul.tabs-btn li a {
         list-style: none;
-        border:1px solid #6d5cae;
-        color: #6d5cae;
+        border:1px solid #004a2f;
+        color: #004a2f;
         padding: 3px 7px;
         border-radius: 5px;
         cursor: pointer;
@@ -62,7 +62,7 @@ and open the template in the editor.
         background-color: #e4def9;
       }
       ul.tabs-btn li.active a{
-        background-color: #6d5cae;
+        background-color: #004a2f;
         color: #fff;
         font-weight: bold;
       }

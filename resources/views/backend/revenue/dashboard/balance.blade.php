@@ -113,7 +113,7 @@
         datasets: [
           {
             label: "wundermar",
-            borderColor: '#6d5cae',
+            borderColor: '#004a2f',
             borderWidth: 1,
             fill: false,
             data: [{{$totalYearSite[1]}}],

@@ -20,7 +20,7 @@
         <tbody>
           <?php foreach (\App\RulesStripe::all() as $key => $rule): ?>
             <tr>
-              <td class="text-center" style="border-left: 1px solid #48b0f7">
+              <td class="text-center" style="border-left: 1px solid #1f7b00">
                 <input class="rules percent-<?php echo $rule->id ?>" type="text" name="cost"
                        data-id="<?php echo $rule->id ?>" value="<?php echo $rule->percent ?>"
                        style="width: 100%;text-align: center;">
@@ -50,7 +50,7 @@
         <tbody>
           <?php foreach (\App\DaysSecondPay::all() as $key => $day): ?>
             <tr>
-              <td class="text-center" style="border-left: 1px solid #48b0f7">
+              <td class="text-center" style="border-left: 1px solid #1f7b00">
                 <input class="daysSecondPayment" type="number" name="days"
                        data-id="<?php echo $day->id ?>" value="<?php echo $day->days ?>"
                        style="width: 100%;text-align: center;">

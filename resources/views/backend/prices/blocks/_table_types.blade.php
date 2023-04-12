@@ -33,7 +33,7 @@
                 <td class="text-center">
                   <input class="editable cost-{{$kPrice}}" type="text" name="cost" data-id="{{$kPrice}}" value="{{$allPrices[$kPrice]['cost']}}" style="width: 100%;text-align: center;border-style: none none">
                 </td>
-                <td class="text-center" style="border-right: 1px solid #48b0f7">
+                <td class="text-center" style="border-right: 1px solid #1f7b00">
                     <?php echo round($allPrices[$kPrice]['benef']) ?>%
                 </td>
               @endforeach

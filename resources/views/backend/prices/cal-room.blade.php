@@ -486,7 +486,7 @@ $(document).ready(function () {
   p.mobile-tit {
     padding: 7px 11px;
     margin: 8px auto 2px;
-    background-color: #4886d2;
+    background-color: #004a2f;
     color: #fff;
     font-size: 1.4em;
     box-shadow: 1px 3px 2px #00132b;

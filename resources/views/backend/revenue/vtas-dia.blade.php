@@ -126,7 +126,7 @@ table.tableMonths tr td {
 }
   table.tableMonths tr td:hover,
   table.tableMonths tr td.active {
-  background-color: #6d5cae;
+  background-color: #004a2f;
     color: #FFF;
   }
 @media only screen and (max-width: 767px) {

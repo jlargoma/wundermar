@@ -82,11 +82,11 @@
   .calcBkg {
     padding: 7px;
     overflow: hidden;
-    border: 2px solid #295d9b;
+    border: 2px solid #004a2f;
     margin: 3px 0px 30px;
   }
   .calcBkg h4{
-    background-color: #295d9b;
+    background-color: #004a2f;
     color: white;
     text-align: center;
     padding: 4px;

@@ -1,6 +1,6 @@
 <style>
   .btn-primary{
-    background-color: #295d9b!important;
+    background-color: #004a2f!important;
   }
   @media only screen and (max-width: 425px){
     .buttons-box{

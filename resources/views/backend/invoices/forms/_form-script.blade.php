@@ -1,6 +1,6 @@
 <style type="text/css">
   h3.invoice {
-    background-color: #6d5cae;
+    background-color: #004a2f;
     padding: 7px;
     color: #FFF;
   }
@@ -26,8 +26,8 @@
   }
   tfoot#summary td{
     padding: 12px !important;
-    border-bottom: 1px solid #6d5cae !important;
-    border-top: 1px solid #6d5cae !important;
+    border-bottom: 1px solid #004a2f !important;
+    border-top: 1px solid #004a2f !important;
   }
 </style>
 <script>
