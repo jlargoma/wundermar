@@ -18,7 +18,7 @@
             <h2 class="font-w300" style="margin: 0">LISTADO DE <span class="font-w800">CLIENTES</span></h2>
         </div>
 
-        <div class="col-md-2 col-xs-12 text-center pull-right push-30">
+        <div class="col-md-2 col-xs-12 text-center pull-right push-30 hide">
             <a class="btn btn-success btn-cons" href="{{ url('/admin/customers/importExcelData') }}">
                 <i class="fa fa-file-excel-o" aria-hidden="true"></i> <span class="bold">Exportar excel</span>
             </a>

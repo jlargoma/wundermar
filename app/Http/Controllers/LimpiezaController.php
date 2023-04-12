@@ -94,12 +94,12 @@ class LimpiezaController extends AppController {
   public function limpiezas() {
 
     $year = $this->getActiveYear();
-
+    $obj1 = $obj2 = $obj3 = null;
     $obj1 = $this->getMonthlyLimpieza($year);
     $year2 = $this->getYearData($year->year - 1);
-    $obj2 = $this->getMonthlyLimpieza($year2);
+    if ($year2)  $obj2 = $this->getMonthlyLimpieza($year2);
     $year3 = $this->getYearData($year2->year - 1);
-    $obj3 = $this->getMonthlyLimpieza($year3);
+    if ($year3)  $obj3 = $this->getMonthlyLimpieza($year3);
 
     $startYear = new Carbon($year->start_date);
     $endYear = new Carbon($year->end_date);

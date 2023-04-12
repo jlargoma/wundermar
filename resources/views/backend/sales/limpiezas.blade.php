@@ -225,18 +225,22 @@ type: 'line',
                         borderColor: "rgba(54, 162, 235, 1)",
                         fill: false
                 },
+                @if($months_2)
                 {
                 data: [{!!$months_2['months_val']!!}],
                         label: '{{$months_2['year']}} - {{$months_2['year']-1}}',
                         borderColor: "rgba(104, 255, 0, 1)",
                         fill: false
                 },
+                @endif
+                @if($months_3)
                 {
-                data: [{!!$months_3['months_val']!!}],
-                        label: '{{$months_3['year']}} - {{$months_3['year']-1}}',
-                        borderColor: "rgba(232, 142, 132, 1)",
-                        fill: false
+                  data: [{!!$months_3['months_val']!!}],
+                  label: '{{$months_3['year']}} - {{$months_3['year']-1}}',
+                  borderColor: "rgba(232, 142, 132, 1)",
+                  fill: false
                 },
+                @endif
                 ]
         },
         options: {

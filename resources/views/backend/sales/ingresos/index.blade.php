@@ -117,10 +117,10 @@ $isMobile = $mobile->isMobile();
           <div class="col-lg-4 col-md-6 col-xs-12">
              @include('backend.sales.ingresos.resume-by-month')
           </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="col-lg-8 col-md-6 col-xs-12">
              @include('backend.sales.ingresos.resume-by-site')
           </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="col-lg-4 col-md-6 col-xs-12 hide">
              @include('backend.sales.ingresos.resume-by-extras')
           </div>
         </div>
@@ -454,27 +454,6 @@ $isMobile = $mobile->isMobile();
             borderWidth: 1,
             fill: false,
             data: [{{$totalYearSite[1]}}],
-          },
-          {
-            label: "Gloria",
-            borderColor: 'green',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[3]}}],
-          },
-          {
-            label: "Siloé",
-            borderColor: 'blue',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[5]}}],
-          },
-          {
-            label: "Zahira",
-            borderColor: 'red',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[6]}}],
           }
         ]
 

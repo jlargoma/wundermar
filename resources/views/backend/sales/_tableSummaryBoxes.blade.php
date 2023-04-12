@@ -57,7 +57,7 @@ if (!isset($hide))
 
 </style>
 <div class="row">
-  <div class="col-lg-8 col-md-12">
+  <div class="col-lg-10 col-md-12">
     <div class="row">
     <div class="sumary bordered mobil_1">
       <label>Total Reservas</label>
@@ -103,12 +103,7 @@ if (!isset($hide))
     </div>
     <div class="sumary bordered min">
       <label>Dias totales</label>
-      @if(!in_array('t_day_1',$hide))
-      <input class="form-control text-black font-w400 text-center seasonDays" value="{{$summary['daysTemp']}}" />
-      @endif
-      @if(!in_array('t_day_2',$hide))
       <h3 class="text-black font-w400 text-center">{{$summary['daysTemp']}}</h3>
-      @endif
     </div>
     </div>
     </div>

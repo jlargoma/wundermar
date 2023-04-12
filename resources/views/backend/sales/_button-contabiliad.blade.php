@@ -41,7 +41,7 @@ $items = [
   ['k'=>7,'url'=>'perdidas-ganancias','title'=>'CTA P &amp; G','id'=>null],   
   ['k'=>8,'url'=>'limpiezas','title'=>'Limpiezas','id'=>null],   
   ['k'=>9,'url'=>'orders-payland','title'=>'PAYLAND','id'=>null],   
-  ['k'=>10,'url'=>'excursiones','title'=>'EXCURSIONES','id'=>null],   
+  // ['k'=>10,'url'=>'excursiones','title'=>'EXCURSIONES','id'=>null],   
 ];
 $toRemove = [];
 if ($uRole !== 'admin'){

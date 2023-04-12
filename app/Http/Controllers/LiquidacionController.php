@@ -12,6 +12,7 @@ use Auth;
 use App\Book;
 use App\BookDay;
 use App\Liquidacion;
+use App\Settings;
 
 setlocale(LC_TIME, "ES");
 setlocale(LC_TIME, "es_ES");
@@ -105,15 +106,15 @@ class LiquidacionController extends AppController {
     
     $liquidacion = new \App\Liquidacion();
 
-    $year = $this->getActiveYear();
-    $startYear = new Carbon($year->start_date);
-    $endYear = new Carbon($year->end_date);
+    $oYear = $this->getActiveYear();
+    $startYear = new Carbon($oYear->start_date);
+    $endYear = new Carbon($oYear->end_date);
 
     $qry_books = Book::where_type_book_sales(true,true)->with([
                         'customer',
                         'payments',
                         'room.type'
-                    ])->whereYear('start','=', $year->year);
+                    ])->whereYear('start','=', $oYear->year);
 
     if (is_array($customerIDs) && count($customerIDs)){
       $qry_books->whereIn('customer_id', $customerIDs);
@@ -133,7 +134,7 @@ class LiquidacionController extends AppController {
             
     $alert_lowProfits = 0; //To the alert efect
     //$percentBenef = DB::table('percent')->find(1)->percent;
-    $percentBenef     = \app\Settings::getKeyValue('percentBenef');
+    $percentBenef     = Settings::getKeyValue('percentBenef');
     $lowProfits = [];
 
     $additionals = [];
@@ -221,7 +222,7 @@ class LiquidacionController extends AppController {
     /* INDICADORES DE LA TEMPORADA */
     $data = [
         'days-ocupation' => 0,
-        'total-days-season' => \App\SeasonDays::first()->numDays,
+        'total-days-season' => $oYear->getNumDays(),
         'num-pax' => 0,
         'estancia-media' => 0,
         'pax-media' => 0,
@@ -267,7 +268,7 @@ class LiquidacionController extends AppController {
           'alert_lowProfits' => $alert_lowProfits,
           'percentBenef' => $percentBenef,
           'totales' => $totales,
-          'year' => $year,
+          'year' => $oYear,
           'data' => $data,
           'additionals' => $additionals
       ];
@@ -1371,41 +1372,7 @@ public function updateGasto(Request $request) {
   }
 
   public function bank() {
-    
-    if (config('app.appl') == "riad" ){
-      return view('backend.sales.bank.after-bank'); 
-    }
-   
-    $year = $this->getActiveYear();
-    $startYear = new Carbon($year->start_date);
-    $endYear = new Carbon($year->end_date);
-
-    $saldoInicial = \App\Bank::where('concept', 'SALDO INICIAL')->where('typePayment', 3)->first();
-
-    $bankItems = \App\Bank::whereIn('typePayment', [2, 0, 3])
-            ->where('date', '>=', $startYear)
-            ->where('date', '<=', $endYear)
-            ->orderBy('date', 'ASC')
-            ->get();
-
-    //Totals
-    $totals = 0; //$saldoInicial->import; 
-    foreach ($bankItems as $key => $cash):
-      if ($cash->type == 1):
-        $totals -= $cash->import;
-      endif;
-      if ($cash->type == 0):
-        $totals += $cash->import;
-      endif;
-    endforeach;
-
-    
-    return view('backend.sales.bank.bank', [
-        'year' => $year,
-        'totals' => $totals,
-        'bankItems' => $bankItems,
-        'saldoInicial' => $saldoInicial,
-    ]);
+    return view('backend.sales.bank.after-bank'); 
   }
 
   public function getTableMovesBank($year, $type) {
@@ -2249,22 +2216,26 @@ public function updateGasto(Request $request) {
         
       
         $season    = self::getYearData($yearFull-1);
-        $yearFull  = $season->year;
-        $yearLst[] = $yearFull;
-        $year = $yearFull-2000;
-        $dataSeason = $oLiquidacion->getBookingAgencyDetailsBy_date($season->start_date,$season->end_date);
-        $agencyBooks['years'][$yearFull]    = $year . '-' . ($year + 1);
-        $aux[$yearFull]     = $dataSeason['data'];
-        $agencyBooks['totals'][$yearFull]   = $dataSeason['totals'];
+        if ($season){
+          $yearFull  = $season->year;
+          $yearLst[] = $yearFull;
+          $year = $yearFull-2000;
+          $dataSeason = $oLiquidacion->getBookingAgencyDetailsBy_date($season->start_date,$season->end_date);
+          $agencyBooks['years'][$yearFull]    = $year . '-' . ($year + 1);
+          $aux[$yearFull]     = $dataSeason['data'];
+          $agencyBooks['totals'][$yearFull]   = $dataSeason['totals'];
+        }
         
-        $season    = self::getYearData($yearFull-1);
-        $yearFull  = $season->year;
-        $yearLst[] = $yearFull;
-        $year = $yearFull-2000;
-        $dataSeason = $oLiquidacion->getBookingAgencyDetailsBy_date($season->start_date,$season->end_date);
-        $agencyBooks['years'][$yearFull]    = $year . '-' . ($year + 1);
-        $aux[$yearFull]     = $dataSeason['data'];
-        $agencyBooks['totals'][$yearFull]   = $dataSeason['totals'];
+        $season  = self::getYearData($yearFull-1);
+        if ($season){
+          $yearFull  = $season->year;
+          $yearLst[] = $yearFull;
+          $year = $yearFull-2000;
+          $dataSeason = $oLiquidacion->getBookingAgencyDetailsBy_date($season->start_date,$season->end_date);
+          $agencyBooks['years'][$yearFull]    = $year . '-' . ($year + 1);
+          $aux[$yearFull]     = $dataSeason['data'];
+          $agencyBooks['totals'][$yearFull]   = $dataSeason['totals'];
+        }
         sort($yearLst);
         
         

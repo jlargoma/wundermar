@@ -371,7 +371,7 @@ $isMobile = $mobile->isMobile();
                 <div class="col-xs-4">
                   <div class="box">
                     <div class="sub-title">Ocupación Habitaciones</div>
-                    <h5>wundermar</h5>
+                    <h5>Wundermar</h5>
                     <?php 
                     $pieOcuwundermar = 0;
                     if ($dispBySite[1]['c']) $pieOcuwundermar = round($dispBySite[1]['t']/$dispBySite[1]['c']);
@@ -382,52 +382,7 @@ $isMobile = $mobile->isMobile();
                     </div>
                   </div>
                 </div>
-                
-                <div class="col-xs-4">
-                  <div class="box">
-                    <div class="sub-title">Ocupación Habitaciones</div>
-                    <h5>Gloria</h5>
-                    <?php 
-                    $pieOcuGloria = 0;
-                    if ($dispBySite[3]['c']) $pieOcuGloria = round($dispBySite[3]['t']/$dispBySite[3]['c']);
-                    ?>
-                    <div class="circle-percent">
-                      <canvas id="pieOcuGloria" style="width: 100%; height: 170px;"></canvas>
-                      <span>{{$pieOcuGloria}} %</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="box">
-                    <div class="sub-title">Ocupación Habitaciones</div>
-                    <h5>SILOE</h5>
-                    <?php 
-                    $pieOcuSiloe = 0;
-                    if ($dispBySite[5]['c']) $pieOcuSiloe = round($dispBySite[5]['t']/$dispBySite[5]['c']);
-                    ?>
-                    <div class="circle-percent">
-                      <canvas id="pieOcuSiloe" style="width: 100%; height: 170px;"></canvas>
-                      <span>{{$pieOcuSiloe}} %</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-4">
-                <div class="box">
-                  <div class="sub-title">Ocupación Habitaciones</div>
-                  <h5>Zahira </h5>
-                  <?php 
-                  $pieOcuZahira = 0;
-                  if ($dispBySite[6]['c']) $pieOcuZahira = round($dispBySite[6]['t']/$dispBySite[6]['c']);
-                  ?>
-                  <div class="circle-percent">
-                    <canvas id="pieOcuZahira" style="width: 100%; height: 170px;"></canvas>
-                    <span>{{$pieOcuZahira}} %</span>
-                  </div>
-                </div>
-              </div>
-             
-              <div class="col-md-12 col-xs-12">
+              <div class="col-md-12 col-xs-12 hide">
                   <h3>Resumen Extras PVP</h3>
                   <div class=" table-responsive">
                   <table class="table table-resumen">
@@ -480,34 +435,12 @@ $isMobile = $mobile->isMobile();
         ],
         datasets: [
           {
-            label: "wundermar",
+            label: "Wundermar",
             borderColor: '#6d5cae',
             borderWidth: 1,
             fill: false,
             data: [{{$totalYearSite[1]}}],
           },
-          {
-            label: "Gloria",
-            borderColor: 'green',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[3]}}],
-          },
-
-          {
-            label: "Siloé",
-            borderColor: 'blue',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[5]}}],
-          },
-          {
-            label: "Zahira",
-            borderColor: 'red',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[6]}}],
-          }
         ]
       };
        var myBarChart = new Chart('barChart', {
@@ -602,34 +535,12 @@ $isMobile = $mobile->isMobile();
           ],
           datasets: [
           {
-            label: "wundermar",
+            label: "Wundermar",
             borderColor: '#6d5cae',
             borderWidth: 1,
             fill: false,
             data: [{{$totalYearSite[1]}}],
-          },
-          {
-            label: "Gloria",
-            borderColor: 'green',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[3]}}],
-          },
-          {
-            label: "Siloé",
-            borderColor: 'blue',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[5]}}],
-          },
-          {
-            label: "Zahira",
-            borderColor: 'red',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[6]}}],
           }
-          
         ]
 
         },
@@ -691,73 +602,5 @@ $isMobile = $mobile->isMobile();
         }
     });
 
-    new Chart(document.getElementById("pieOcuGloria"), {
-        type: 'doughnut',
-        data: {
-            labels: ["Ocupac",'Libre'],
-            datasets: [{
-                label: '',
-                data: [{{$pieOcuGloria}},{{100-$pieOcuGloria}}],
-                backgroundColor: ['rgba(159, 90, 253, 1)'],
-                borderColor: ['rgba(255, 255, 255 ,1)',],
-                borderWidth: 2
-            },
-            ]
-        },
-        options: {
-            rotation: 1 * Math.PI,/** This is where you need to work out where 89% is */
-            circumference: 1 * Math.PI,/** put in a much smaller amount  so it does not take up an entire semi circle */
-            legend: {display: false},
-            tooltip: {enabled: false},
-            cutoutPercentage: 70
-        }
-    });
-     new Chart(document.getElementById("pieOcuZahira"), {
-        type: 'doughnut',
-        data: {
-            labels: ["Ocupac",'Libre'],
-            datasets: [{
-                label: '',
-                data: [{{$pieOcuZahira}},{{100-$pieOcuZahira}}],
-                backgroundColor: ['rgba(159, 90, 253, 1)'],
-                borderColor: ['rgba(255, 255, 255 ,1)',],
-                borderWidth: 2
-            },
-            ]
-        },
-        options: {
-            rotation: 1 * Math.PI,/** This is where you need to work out where 89% is */
-            circumference: 1 * Math.PI,/** put in a much smaller amount  so it does not take up an entire semi circle */
-            legend: {display: false},
-            tooltip: {enabled: false},
-            cutoutPercentage: 70
-        }
-    });
-     new Chart(document.getElementById("pieOcuSiloe"), {
-        type: 'doughnut',
-        data: {
-            labels: ["Ocupac",'Libre'],
-            datasets: [{
-                label: '',
-                data: [{{$pieOcuSiloe}},{{100-$pieOcuSiloe}}],
-                backgroundColor: ['rgba(159, 90, 253, 1)'],
-                borderColor: ['rgba(255, 255, 255 ,1)',],
-                borderWidth: 2
-            },
-            ]
-        },
-        options: {
-            rotation: 1 * Math.PI,/** This is where you need to work out where 89% is */
-            circumference: 1 * Math.PI,/** put in a much smaller amount  so it does not take up an entire semi circle */
-            legend: {display: false},
-            tooltip: {enabled: false},
-            cutoutPercentage: 70
-        }
-    });
-    
-    
-    
-    
-  
     </script>
 @endsection

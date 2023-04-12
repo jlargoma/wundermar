@@ -68,8 +68,6 @@
           <label>Edificio</label>
           <select name="type" class="form-control">
             <option value="wundermar" @if( $type == 'wundermar') selected @endif >wundermar</option>
-            <option value="rosa" @if( $type == 'rosa') selected @endif >Rosa D'Oro</option>
-            <option value="gloria" @if( $type == 'gloria') selected @endif >Gloria</option>
           </select>
         </div>
         <div class="col-md-4">

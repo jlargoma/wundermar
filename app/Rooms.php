@@ -279,7 +279,7 @@ class Rooms extends Model
       $year = \App\Years::where('year', $year)->first();
       if (!$year){
         $existYear = false;
-        $year = Years::where('active', 1)->first();
+        $year = Years::first();
       }
       $startYear = new Carbon($year->start_date);
       $endYear = new Carbon($year->end_date);
