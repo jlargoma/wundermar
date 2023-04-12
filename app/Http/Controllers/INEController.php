@@ -130,6 +130,10 @@ class INEController  extends AppController{
         $encuesta = $this->createXML_Apartamento();
         $file= public_path(). "/estadisticas-xml/salida-apartamentos.xml";
         break;
+      default:
+        $encuesta = $this->createXML_Apartamento();
+        $file= public_path(). "/estadisticas-xml/salida-apartamentos.xml";
+        break;
     }
     
     if ($encuesta){
@@ -160,12 +164,15 @@ class INEController  extends AppController{
     $dwnl_url .= base64_encode(json_encode([$this->start,$this->finish])).'/'.base64_encode(json_encode($this->force));
     $dwnl_url .= '/'.time().'-'. rand();
     switch ($type){
-      case 'rosa':
+      case 'hotel':
         $encuesta = $this->getEncuestaDataHotel();
         break;
-      case 'riad':
+      case 'apto':
         $encuesta = $this->getEncuestaDataApartamento();
         break;
+      default:
+        $encuesta = $this->getEncuestaDataApartamento();
+          break;
     }
 
     //RENDER MOVIM
