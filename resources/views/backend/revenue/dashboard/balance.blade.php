@@ -117,27 +117,6 @@
             borderWidth: 1,
             fill: false,
             data: [{{$totalYearSite[1]}}],
-          },
-          {
-            label: "Gloria",
-            borderColor: 'green',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[3]}}],
-          },
-          {
-            label: "Siloé",
-            borderColor: 'blue',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[5]}}],
-          },
-          {
-            label: "Zahira",
-            borderColor: 'red',
-            borderWidth: 1,
-            fill: false,
-            data: [{{$totalYearSite[6]}}],
           }
         ]
       };

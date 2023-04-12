@@ -56,6 +56,8 @@ Route::group(['middleware' => 'authAdmin'], function () {
   Route::get('/ical/getLasts', 'ICalendarController@getLasts');
   Route::get('/ical/urls/getAllUrl/{aptoID}', 'ICalendarController@getAllUrl');
  
+  Route::get('/procesarReservasTemporada', 'RouterActionsController@loadBookingsDays');
+  
 });
 
 /**

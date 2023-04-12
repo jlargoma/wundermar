@@ -14,14 +14,11 @@
     Route::auth();
     Route::get('/', 'HomeController@index');
     Route::get('/home', 'HomeController@index');
-    Route::get('create-cache', 'HomeController@index')->middleware('page-cache');
     Route::get('/404', 'AppController@get_404');
     Route::get('/no-allowed','AppController@no_allowed');
     Route::get('403','AppController@no_allowed');
     Route::post('static-token','AppController@staticToken');
     Route::get('/partee-checkHuespedes','AppController@partee_checkHuespedes');
-//    Route::post('zodomus-Webhook','ZodomusController@webHook');
-    // Route::get('wubook-Webhook', 'OtasController@webHook_Wubook');
     Route::post('wubook-Webhook', 'OtasController@webHook_Wubook');
     Route::post('Ota-Gateway-Webhook/{siteID}', 'OtasController@webHook');
   
@@ -31,65 +28,22 @@
     Route::get('/form-demo', 'BookController@demoFormIntegration');
     Route::post('/api/check_rooms_avaliables', 'BookController@apiCheckBook')->name('api.proccess');
     
-    Route::group(['middleware' => 'web'], function () {
-      Route::get('/sitemap', 'HomeController@siteMap');
-      Route::get('/apartamentos/galeria/{apto}', 'HomeController@galeriaApartamento');
-      Route::get('/apartamentos/{apto}', 'HomeController@apartamento')->name('web.apto');
-      Route::get('/fotos/{apto}', 'HomeController@apartamento');
-      Route::get('/el-edificio', 'HomeController@edificio')->name('web.edificio');
-      Route::get('/el-hotel', 'HomeController@edificio');
-      Route::get('/contacto', 'HomeController@contacto');
-      Route::get('/blog/{name?}', 'HomeController@blog')->name('blog');
-    });
-
-    Route::post('/excursiones', 'ExcursionsControllers@sendWishList');
-    Route::get('/excursiones', 'ExcursionsControllers@frontend')->name('excursions.frontend');
-    
-    
-    //   /*Correos Frontend */
-    Route::post('/contacto-form', 'HomeController@formContacto');
-    Route::post('/contacto-ayuda', 'HomeController@formAyuda');
-    Route::post('/contacto-propietario', 'HomeController@formPropietario');
-    Route::post('/contacto-grupos', 'HomeController@formGrupos');
+  
     //   /* Correos Frontend */getCalendarMobile
     Route::get('/buzon', 'HomeController@buzon');
     Route::get('/terminos-condiciones', 'HomeController@terminos');
     Route::get('/politica-cookies', 'HomeController@politicaCookies');
     Route::get('/politica-privacidad', 'HomeController@politicaPrivacidad');
-    Route::get('/condiciones-generales', 'HomeController@condicionesGenerales');
-    Route::get('/preguntas-frecuentes', 'HomeController@preguntasFrecuentes');
-    Route::get('/eres-propietario', 'HomeController@eresPropietario');
-    Route::get('/grupos', 'HomeController@grupos');
-    Route::get('/quienes-somos', 'HomeController@quienesSomos');
-    Route::get('/ayudanos-a-mejorar', 'HomeController@ayudanosAMejorar');
-    Route::get('/aviso-legal', 'HomeController@avisoLegal');
-    Route::get('/huesped', 'HomeController@huesped');
-    Route::get('/el-tiempo', 'HomeController@tiempo');
     Route::get('/condiciones-contratacion', 'HomeController@condicionesContratacion')->name('cond.contratacion');
     Route::get('/condiciones-fianza', 'HomeController@condicionesFianza')->name('cond.fianza');
-    Route::get('/restaurantes', 'HomeController@restaurantes')->name('cond.resto');
-    Route::post('/solicitudForfait', 'HomeController@solicitudForfait');
-    Route::get('/admin/links-stripe', 'StripeController@link');
     Route::get('/payments-forms/{token}', 'PaylandsController@paymentsForms')->name('front.payments');
     Route::post('/payments-save-dni/{token}', 'PaylandsController@saveDni')->name('front.payments.dni')->middleware('cors');
     Route::post('/payments-save-supplement/{token}', 'PaylandsController@addExtrs')->name('front.payments.addExtrs')->middleware('cors');
 
-
-    /* ENCUESTAS */
-    Route::get('/encuesta-satisfaccion/{id}', 'QuestionsController@index');
-    Route::post('/questions/vote', 'QuestionsController@vote');
-    /* FIN ENCUESTAS*/
     /* CRONTABS */
     Route::get('/admin/reservas/api/checkSecondPay', 'BookController@checkSecondPay');
     // AJAX REQUESTS
     Route::post('/ajax/requestPrice', 'FortfaitsController@calculatePrice');
-    Route::post('/ajax/forfaits/updateRequestStatus', 'FortfaitsController@updateRequestStatus');
-    Route::post('/ajax/forfaits/updateRequestPAN', 'FortfaitsController@updateRequestPAN');
-    Route::post('/ajax/forfaits/updateRequestComments', 'FortfaitsController@updateRequestComments');
-    Route::post('/ajax/forfaits/updateCommissions', 'FortfaitsController@updateCommissions');
-    Route::post('/ajax/forfaits/updatePayments', 'FortfaitsController@updatePayments');
-    Route::post('/ajax/forfaits/requestPriceForfaits', 'FortfaitsController@requestPriceForfaits');
-
     // ReCaptcha v3
     Route::post('/ajax/checkRecaptcha', 'FortfaitsController@checkReCaptcha');
 
@@ -112,78 +66,10 @@
         'as' => 'import-iCalendar',
         'uses' => 'ICalendarController@getIcalendar'
     ])->where('aptoID', '[0-9]+');
-
-     
-    Route::get('/test/call-1/{param?}','X_TEST@call_1')->middleware('auth');   
-    Route::get('/test/call-2/{param?}','X_TEST@call_2')->middleware('auth');   
-//    Route::get('/ical/importFromUrl', function () {
-//      \Artisan::call('ical:import');
-////      return redirect('/admin/reservas');
-//    });
-    
     
   Route::get('/factura/{id}/{num}/{emial}', 'InvoicesController@donwload_external');
   Route::post('/payments-moto', 'PaylandsController@processPaymentMoto');
   Route::get('/clear-cookies','RouterActionsController@clearCookies');
-
-
-    Route::get('/payments-forms-forfaits/{token}', 'ForfaitsItemController@paymentsForms')->name('front.payments.forfaits');
-    Route::get('/payments-forms-forfaits-complete/{token}', 'ForfaitsItemController@paymentsFormsAll')->name('front.payments.forfaits.all');
-    Route::get('/api/forfaits/thansk-you/{key_token}', 'ForfaitsItemController@thansYouPayment')->name('payland.thanks.forfait');
-    Route::get('/api/forfaits/error/{key_token}', 'ForfaitsItemController@errorPayment')->name('payland.error.forfait');
-    Route::get('/api/forfaits/process/{key_token}', 'ForfaitsItemController@processPayment')->name('payland.process.forfait');
-    Route::post('/api/forfaits/process/{key_token}', 'ForfaitsItemController@processPayment')->name('payland.process.forfait');
-    Route::get('/api/forfaits/token', 'ForfaitsItemController@getUserAdmin');
-    Route::post('/api/forfaits/getPayments', 'ForfaitsItemController@getPayments');
-    Route::post('/api/forfaits/createPayment', 'ForfaitsItemController@createPayment');
-    Route::post('/api/forfaits/createPaylandsUrl', 'ForfaitsItemController@createPaylandsUrl');
-    Route::post('/api/forfaits/quickOrders', 'ForfaitsItemController@quickOrders');
-    Route::post('/api/forfaits/changeStatus', 'ForfaitsItemController@changeStatus');
-    Route::get('/api/forfaits/class', 'ForfaitsItemController@api_getClasses');
-    Route::get('/api/forfaits/categ', 'ForfaitsItemController@api_getCategories');
-    Route::get('/api/forfaits/items/{id}', 'ForfaitsItemController@api_items');
-    Route::post('/api/forfaits/cancelItem', 'ForfaitsItemController@cancelItem');
-    Route::post('/api/forfaits/saveCart', 'ForfaitsItemController@saveCart');
-    Route::post('/api/forfaits/checkout', 'ForfaitsItemController@checkout');
-    Route::post('/api/forfaits/forfaits', 'ForfaitsItemController@getForfaitUser');
-    Route::post('/api/forfaits/insurances', 'ForfaitsItemController@getInsurances');
-    Route::get('/api/forfaits/bookingData/{bID}/{uID}', 'ForfaitsItemController@bookingData');
-    Route::get('/api/forfaits/getCurrentCart/{bID}/{uID}', 'ForfaitsItemController@getCurrentCart');
-    Route::get('/api/forfaits/sedOrder/{bID}/{uID}/{type}', 'ForfaitsItemController@sendClientEmail');
-    Route::post('/api/forfaits/sendOrder', 'ForfaitsItemController@sendOrdenToClient');
-    Route::post('/api/forfaits/showOrder', 'ForfaitsItemController@showOrder');
-    Route::post('/api/forfaits/sendConsult', 'ForfaitsItemController@sendEmail');
-    Route::get('/api/forfaits/getSeasons', 'ForfaitsItemController@getForfaitSeasons');
-    Route::post('/api/forfaits/createNewOrder', 'ForfaitsItemController@createNewOrder');
-    Route::post('/api/forfaits/sendClassToAdmin', 'ForfaitsItemController@sendClassToAdmin');
-    Route::post('/api/forfaits/getFFOrders', 'ForfaitsItemController@getFFOrders');
-    Route::post('/api/forfaits/remove-order', 'ForfaitsItemController@removeOrder');
-    Route::post('/api/forfaits/orders-history', 'ForfaitsItemController@ordersHistory');
-    Route::post('/api/forfaits/get-payment', 'ForfaitsItemController@getPayment');
-//    Route::get('/aaaa', 'ForfaitsItemController@aaaa');
-    
-    
-    /**
- * FORFAITS
- */
-Route::group(['middleware' => ['auth','role:admin|subadmin'], 'prefix' => 'admin/forfaits',], function () {
-  Route::get('/orders', 'ForfaitsItemController@listOrders');
-  Route::get('/balance', 'ForfaitsItemController@getBalance');
-  Route::post('/open', 'ForfaitsItemController@getOpenData');
-  Route::get('/edit/{id}', 'ForfaitsItemController@edit');
-  Route::post('/upd', 'ForfaitsItemController@update');
-  Route::get('/createItems', 'ForfaitsItemController@createItems');
-  Route::get('/getBookItems/{bookingID}', 'ForfaitsItemController@getBookingFF');
-  Route::post('/loadComment', 'ForfaitsItemController@loadComment');
-  Route::post('/sendBooking', 'ForfaitsItemController@sendBooking');
-  Route::get('/resume/{id}', 'ForfaitsItemController@getResume');
-  Route::get('/resume-by-book/{id}', 'ForfaitsItemController@getResumeBy_book');
-  Route::get('/resent_thansYouPayment/{id}', 'ForfaitsItemController@resent_thansYouPayment');
-  Route::get('/getBookData/{id}', 'ForfaitsItemController@getBookData');
-  Route::get('/changeBook/{id}/{ffID}', 'ForfaitsItemController@changeBook');
-  Route::get('/sendFFExpress/{order_id}/{ffID}', 'ForfaitsItemController@sendFFExpress');
-  Route::get('/{class?}', 'ForfaitsItemController@index');
-});
 
 
 
@@ -203,11 +89,7 @@ Route::group(['middleware' => ['auth','role:admin|limpieza|subadmin|recepcionist
   Route::post('admin/limpieza/extr-deliver', 'LimpiezaController@deliverExtra');
   Route::get('admin/limpieza/delete-block/{id}', 'LimpiezaController@bloqueos_delete');
   Route::get('admin/limpieza', 'LimpiezaController@index');
-  //Extras
-  Route::get('admin/excursiones', 'ExtrasController@index');
-  Route::get('admin/excursiones/{year?}','ExtrasController@index');
-  Route::post('admin/excursionesLst/','ExtrasController@get_list');
-  
+
   //Extras
   Route::get('admin/sales', 'ExtrasController@sales_index')->name('revenue.sales');
   Route::get('admin/sales/{year?}','ExtrasController@sales_index');
@@ -267,11 +149,7 @@ Route::group(['middleware' => ['auth','role:admin|limpieza|subadmin|recepcionist
   Route::post('/ajax/send-SafetyBox-sms', 'BookController@sendSafetyBoxSMS');
   Route::post('/ajax/send-SafetyBox-mail', 'BookController@sendSafetyBoxMail');
   Route::get('/admin/get-SafetyBox', 'BookController@getSafetyBoxLst');
-  Route::get('/admin/multiple-room-lock', 'BookController@multipleRoomLock_print');
-  Route::post('/admin/multiple-room-lock', 'BookController@multipleRoomLock_send');
-  Route::post('/admin/multiple-room-lock-task', 'BookController@multipleRoomLock_tasks');
-  Route::get('/admin/get-CustomersRequest', 'BookController@getCustomersRequestLst');
-  Route::post('admin/hideCustomersRequest', 'BookController@hideCustomersRequest');
+
   Route::post('admin/removeAlertPax', 'BookController@removeAlertPax');
   Route::post('admin/saveCustomerRequest', 'BookController@saveCustomerRequest');
   Route::post('admin/getCustomersRequest', 'BookController@getCustomersRequest');
@@ -350,17 +228,6 @@ Route::group(['middleware' => ['auth','role:admin|propietario|recepcionista'], '
   Route::get('/facturas/{order?}', 'InvoicesController@index');
   
   
- //Propietario
-  Route::get('/propietario/bloquear', 'OwnedController@bloqOwned');
-  Route::get('/propietario/{name?}/operativa', 'OwnedController@operativaOwned');
-  Route::get('/propietario/{name?}/tarifas', 'OwnedController@tarifasOwned');
-  Route::get('/propietario/{name?}/descuentos', 'OwnedController@descuentosOwned');
-  Route::get('/propietario/{name?}/fiscalidad', 'OwnedController@fiscalidadOwned');
-  Route::get('/propietario/{name?}/facturas', 'OwnedController@facturasOwned');
-  Route::get('/propietario/{name?}', 'OwnedController@index');
-  Route::get('/propietario/create/password/{email}', 'UsersController@createPasswordUser');
-  Route::post('/propietario/create/password/{email}', 'UsersController@createPasswordUser');
-  
 });
 
 /** Moved form routers */
@@ -387,10 +254,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
   Route::get('/liquidation/orderByBenefCritico', 'LiquidacionController@orderByBenefCritico');
   Route::get('/apartamentos/rooms/getTableRooms/', 'RouterActionsController@getTableRooms');
   Route::get('/rooms/search/searchByName', 'RoomsController@searchByName');
-
-  
-  Route::get('/paymentspro/delete/{id}', 'RouterActionsController@paymentspro_del');
-
   Route::get('/customer/change/phone/{id}/{phone}','RouterActionsController@customer_change');
   
   Route::get('/sendImagesRoomEmail', 'RoomsController@sendImagesRoomEmail');
@@ -404,12 +267,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
   Route::get('/sales/updatePVP/{id}/{importe}','RouterActionsController@sales_updatePVP');
   Route::get('/invoices/searchByName/{searchString?}','RouterActionsController@invoices_searchByName');
   Route::post('/specialSegments/delete/{id?}', 'SpecialSegmentController@delete');
-  Route::get('/stripe-connect/{id}/acceptStripeConnect', 'StripeConnectController@acceptStripe');
-  Route::get('/stripe-connect', 'StripeConnectController@index');
-  Route::post('/stripe-connect/create-account-stripe-connect', 'StripeConnectController@createAccountStripeConnect');
-  Route::post('/stripe-connect/load-transfer-form', 'StripeConnectController@loadTransferForm');
-  Route::get('/stripe-connect/load-table-owneds', 'StripeConnectController@loadTableOwneds');
-  Route::post('/stripe-connect/send-transfers', 'StripeConnectController@sendTransfers');
+ 
   //YEARS
   Route::get('/years/get', 'YearsController@getYear')->name('years.get');
   Route::post('/years/change', 'YearsController@changeActiveYear')->name('years.change');
@@ -430,27 +288,15 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
   Route::get('settings/updateExtra','SettingsController@updExtraPrices')->name('settings.extr_price.upd');
   Route::post('settings/createExtras','SettingsController@createExtraPrices')->name('settings.extr_price.create');
   Route::delete('settings/createExtras','SettingsController@delteExtraPrices')->name('settings.extr_price.del');
-//  Route::get('settings/deleteExtra/{id}','SettingsController@delExtraPrices')->name('settings.extr_price.del');
   Route::get('settings/updateWeiland','SettingsController@updateWeiland')->name('settings.weiland.upd');
   
-  
-  
   //PAYMENTS
-//  Route::post('/', 'SettingsController@createUpdateSetting')->name('settings.createUpdate');
   Route::get('/links-payland', 'PaylandsController@link');
   Route::get('/links-payland-single', 'PaylandsController@linkSingle');
 });
 
 Route::group(['middleware' => ['auth','role:admin|subadmin|recepcionista']], function () {
-  Route::post('admin/excursions/edit', 'ExcursionsControllers@save')->name('excursions.edit');
-  Route::post('admin/excursions/delete', 'ExcursionsControllers@delete')->name('excursions.delete');
-  Route::get('admin/excursions/gallery/{id?}', 'ExcursionsControllers@gallery')->name('excursions.gallery');
-  Route::post('admin/excursions/deletePhoto/{id?}', 'ExcursionsControllers@deletePhoto')->name('excursions.deleteImage');
-  Route::post('admin/excursions/uploadFile', 'ExcursionsControllers@uploadImages')->name('excursions.uploadImages');
-  Route::post('admin/excursions/photo_orden', 'ExcursionsControllers@updOrderImages')->name('excursions.updOrderImages');
-  Route::get('admin/excursions/{id?}', 'ExcursionsControllers@index')->name('excursions');
-  
-    
+
   // Clientes
   Route::get('admin/clientes/update', 'CustomersController@update');
   Route::post('admin/clientes/save', 'CustomersController@save');
@@ -476,7 +322,6 @@ Route::group(['middleware' => 'authAdmin'], function () {
   
   Route::get('/partee-checkStatus/{id}', 'AppController@parteeCheckStatus');
   Route::get('/partee-getPDF/{id}', 'AppController@parteeGetPDF');
-  Route::get('admin/re_saveImg', 'ContentsControllers@re_saveImg');
   Route::get('admin/cambiarCostes', 'BookController@changeCostes');
   // Usuarios
   Route::get('admin/usuarios', 'UsersController@index');
@@ -521,7 +366,6 @@ Route::group(['middleware' => 'authAdmin'], function () {
 
   // AUX PROPIETARIOS
   Route::get('admin/propietarios/dashboard/{name?}/{year?}', 'OwnedController@index');
-//  Route::post('/ajax/forfaits/deleteRequestPopup', 'FortfaitsController@deleteRequestPopup');
   Route::post('/ajax/booking/getBookingAgencyDetails', 'LiquidacionController@getBookingAgencyDetails');
   Route::get('/ajax/booking/getBookingAgencyDetails', 'LiquidacionController@getBookingAgencyDetails');
   /* ICalendar links */
@@ -530,6 +374,9 @@ Route::group(['middleware' => 'authAdmin'], function () {
   Route::get('/ical/getLasts', 'ICalendarController@getLasts');
   Route::get('/ical/urls/getAllUrl/{aptoID}', 'ICalendarController@getAllUrl');
  
+
+  Route::get('/procesarReservasTemporada', 'RouterActionsController@loadBookingsDays');
+  
 });
 
 /**
@@ -612,9 +459,7 @@ Route::group(['middleware' => ['auth','role:admin|subadmin'], 'prefix' => 'admin
   Route::get('/channel-manager/price/{apto?}','OtasController@calendRoom')->name('channel.price.cal');
   Route::post('/channel-manager/price/{apto?}','OtasController@calendRoomUPD')->name('channel.price.cal.upd');
   Route::get('/channel-manager/price/precios/list/{apto}','OtasController@listBy_room')->name('channel.price.cal.list');
-//  Route::get('/list/{apto}','ZodomusController@listBy_apto')->name('channel.cal.list');
   Route::get('/channel-manager/config', 'OtasController@generate_config');
-//  Route::get('/disponibilidad/{apto}/{start}/{end}','ZodomusController@listDisponibilidad');
   Route::get('/channel-manager/index', 'OtasController@index')->name('channel.index');
   Route::post('/channel-manager/send-avail/{apto}', 'OtasController@sendAvail')->name('channel.sendAvail');
   Route::get('/channel-manager/price-site/{site?}/{month?}/{year?}','OtasController@calendSite')->name('channel.price.site');
@@ -625,21 +470,12 @@ Route::group(['middleware' => ['auth','role:admin|subadmin'], 'prefix' => 'admin
   Route::post('/channel-manager/promociones/upd','PromotionsController@update')->name('channel.promotions.upd');
   Route::delete('/channel-manager/promociones','PromotionsController@delete')->name('channel.promotions.delete');
   Route::get('/channel-manager/controlOta/','OtasController@controlOta')->name('channel.price.diff');
-//  Route::post('/Wubook/sendMinStay', 'WubookController@sendMinStayGroup')->name('Wubook.sendMinStay');  
-//  Route::get('/ZODOMUS', 'ZodomusController@zodomusTest');
-//  Route::get('/index', 'ZodomusController@index')->name('channel.index');
-//  Route::get('/forceImport', 'ZodomusController@forceImport')->name('channel.forceImport');
-//  Route::post('/send-avail/{apto}', 'ZodomusController@sendAvail')->name('channel.sendAvail');
-//  Route::get('', 'ZodomusController@calendRoom')->name('channel');
+
 });
 
 Route::group(['middleware' => ['auth','role:admin|subadmin|recepcionista'], 'prefix' => 'admin',], function () {
   
   // Clientes
-//  Route::get('/clientes/update', 'CustomersController@update');
-//  Route::get('/clientes/save', 'CustomersController@save');
-//  Route::post('/clientes/create', 'CustomersController@create');
-//  
   Route::get('/get_mails', 'ChatEmailsController@index');
   Route::get('/galleries', 'RoomsController@galleries');
 
@@ -683,23 +519,6 @@ Route::group(['middleware' => ['auth','role:admin|subadmin|recepcionista'], 'pre
   Route::get('/get-summary-payland', 'PaylandsController@getSummary');
   Route::get('/getOrderID/{uid}', 'PaylandsController@getOrder');
   
-  
-//    // ZODOMUS  
-//  Route::get('/channel-manager/disponibilidad/{apto}/{start}/{end}','ZodomusController@listDisponibilidad');
-//  Route::get('/channel-manager/price/{apto?}','ZodomusController@calendRoom')->name('channel.price.cal');
-//  Route::get('/channel-manager/price-site/{site?}/{month?}/{year?}','ZodomusController@calendSite')->name('channel.price.site');
-//  Route::post('/channel-manager/upd-price-site/','ZodomusController@calendSiteUpd')->name('channel.price.site.upd');
-//  Route::post('/channel-manager/price/{apto?}','ZodomusController@calendRoomUPD')->name('channel.price.cal.upd');
-//  Route::get('/channel-manager/price/precios/list/{apto}','ZodomusController@listBy_room')->name('channel.price.cal.list');
-//  Route::get('/channel-manager/list/{apto}','ZodomusController@listBy_apto')->name('channel.cal.list');
-//  Route::get('/channel-manager/config', 'ZodomusController@generate_config');
-//  Route::get('/channel-manager/ZODOMUS', 'ZodomusController@zodomusTest');
-//  Route::get('/channel-manager/index', 'ZodomusController@index')->name('channel.index');
-//  Route::get('/channel-manager/forceImport', 'ZodomusController@forceImport')->name('channel.forceImport');
-//  Route::get('/channel-manager/promociones', 'PricesController@promotions')->name('channel.promotions');
-//  Route::post('/channel-manager/send-avail/{apto}', 'ZodomusController@sendAvail')->name('channel.sendAvail');
-//  Route::get('/channel-manager', 'ZodomusController@calendRoom')->name('channel');
-//  
   
   // WUBOOK
   Route::get('/Wubook', 'WubookController@index');
@@ -755,18 +574,6 @@ Route::group(['middleware' => ['auth','role:admin|subadmin'], 'prefix' => 'admin
   Route::get('/rules/stripe/update', 'RulesStripeController@update');
   Route::get('/days/secondPay/update/{id}/{days}','RouterActionsController@days_secondPay_update');
   Route::get('/estadisticas/{year?}', 'LiquidacionController@Statistics');
-  
-
-  
-  // Pagos-Propietarios
-  Route::get('/pagos-propietarios', 'PaymentsProController@index');
-  Route::post('/pagos-propietarios/create', 'PaymentsProController@create');
-  Route::get('/pagos-propietarios/update/{id}/{month?}', 'PaymentsProController@update');
-  Route::get('/paymentspro/getBooksByRoom/{idRoom}', 'PaymentsProController@getBooksByRoom');
-  Route::get('/paymentspro/getLiquidationByRoom', 'PaymentsProController@getLiquidationByRoom');
-  Route::get('/paymentspro/getLiquidationByMonth', 'PaymentsProController@getLiquidationByMonth');
-  Route::get('/pagos-propietarios/get/historic_production/{room_id}', 'PaymentsProController@getHistoricProduction');
-  Route::post('/pagos-propietarios', 'PaymentsProController@indexByDate');
   
   Route::get('/ical/importFromUrl', 'AppController@importFromUrl');
   Route::get('/zodomus/import', 'ZodomusController@importBookings');

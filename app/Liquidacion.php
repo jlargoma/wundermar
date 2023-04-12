@@ -38,7 +38,7 @@ class Liquidacion
      * @return type
      */
     public function summaryTemp($oYear = null) {
-      return $this->get_summary(BookDay::getBy_temporada($oYear),true);
+      return $this->get_summary(BookDay::getBy_temporada($oYear),true,$oYear);
     }
 
     /**
@@ -46,7 +46,7 @@ class Liquidacion
      * @param type $books
      * @return type
      */
-    public function get_summary($lstRvs,$temporada=false) {
+    public function get_summary($lstRvs,$temporada=false,$oYear) {
       $bLstID = [];
       $t_pax = $t_nights = $t_pvp = $t_cost = $vta_agency = 0;
       foreach ($lstRvs as $key => $b) {
@@ -82,7 +82,7 @@ class Liquidacion
           'nights-media' => ($t_nights>0) ? ceil($t_nights/$t_books) : 0,
           'vta_prop'=>0,
           'vta_agency'=>0,
-          'daysTemp'=>\App\SeasonDays::first()->numDays,//$startYear->diffInDays($endYear)
+          'daysTemp'=>$oYear->getNumDays()
         ];
       if($t_books>0){
         $summary['vta_agency'] = round(($vta_agency / $t_books) * 100);

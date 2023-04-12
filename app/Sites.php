@@ -30,19 +30,13 @@ class Sites extends Model
   
   static function siteIDs() {
     return [
-        1,//RIAD
-//        2,//Rosa D'Oro
-        3,//Gloria
-//        4,//CALLE ELVIRA
-        5,//Siloe
-        6,//Zahira
+        1,//Wundermar
     ];
   }
   
   static function bSite() {
     return[
-        0=>['Todos',''],1=>['',0],3=>['',0],4=>['',0],5=>['',0],6=>['',0]];
-        // 0=>['Todos',''],1=>['',0],2=>['',0],3=>['',0],4=>['',0],5=>['',0],6=>['',0]];
+        0=>['Todos',''],1=>['',0]];
   }
   
   

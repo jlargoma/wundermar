@@ -224,6 +224,15 @@ class RouterActionsController extends AppController {
   function processData() {
     \Artisan::call('ProcessData:all');
   }
+
+  function loadBookingsDays() {
+    $BookDaysProcess = new \App\Services\BookDaysProcess();
+    $errors = $BookDaysProcess->process();
+    if (empty($errors)) return redirect()->back()->with('success', 'Imágenes Guardadas'); 
+    
+    $errors = ['Las Siguientes reservas deben controlarse: '.implode(' | ',$errors)];
+    return redirect()->back()->withErrors($errors); 
+  }
   
   function clearCookies() {
     unset($_COOKIE["XSRF-TOKEN"]);

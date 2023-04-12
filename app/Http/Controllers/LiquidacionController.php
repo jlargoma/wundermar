@@ -1500,7 +1500,7 @@ public function updateGasto(Request $request) {
       'benef'=>0,
       'vta_prop'=>0,
       'vta_agenda'=>0,
-      'daysTemp'=>\App\SeasonDays::first()->numDays,//$startYear->diffInDays($endYear)
+      'daysTemp'=>$oYear->getNumDays()
     ];
     
    

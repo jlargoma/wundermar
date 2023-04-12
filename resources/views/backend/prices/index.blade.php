@@ -187,13 +187,10 @@ $isMobile = config('app.is_mobile');
     
 
     <div class="row">
-      <div class="col-md-4">
-        @include('backend.prices.blocks.extras')
-      </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         @include('backend.prices.blocks.costes')
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         @include('backend.prices.blocks.extr-paxs')
         @include('backend.prices.blocks.dias-min')
       </div>

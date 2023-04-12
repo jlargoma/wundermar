@@ -466,10 +466,10 @@ class RevenueService
       for($i=0;$i<5;$i++){
         $aux_year = $year-$i;
         
-        $totalAnual[$aux_year] = $totalYear = $t1;
-        $totalYearMonth = $t2;
         $oYear = \App\Years::where('year', $aux_year)->first();
         if (!$oYear) continue;
+        $totalYearMonth = $t2;
+        $totalAnual[$aux_year] = $totalYear = $t1;
         $this->start  = $oYear->start_date;
         $this->finish = $oYear->end_date;
         $this->setBook();

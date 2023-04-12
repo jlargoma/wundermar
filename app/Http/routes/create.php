@@ -21,7 +21,7 @@ $file3 = file_get_contents(dirname(__FILE__).'/routes-superAdmin.php');
 $file4 = file_get_contents(dirname(__FILE__).'/routes-api.php');
 
 
-$fileResult .= $file.$file1.$file2.$file3.$file4;
+$fileResult .= $file.$file2.$file3.$file4;
 $fileResult = str_replace('?><?php','',$fileResult);
 //  include_once 'routes-forfaits.php';
 //  include_once 'routes-admin.php';

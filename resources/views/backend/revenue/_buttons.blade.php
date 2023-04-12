@@ -44,5 +44,8 @@ $lstBtn = [
         <?php endif ?>	
     </div>
   <?php endforeach; ?>
+    <div class="btn-sub-menu">
+          <a class="text-white btn btn-md btn-primary" href="/procesarReservasTemporada">Procesar Reservas</a>
+    </div>
   </div>
 </div>

@@ -42,27 +42,12 @@ class BookingsDays extends Command {
    * @return mixed
    */
   public function handle() {
-    $cYear = date('Y');
-//    $oYear = Years::where('year', $cYear-2)->first();
-//    if ($oYear){
-//      $error =BookDay::createSeasson($oYear->start_date,$oYear->end_date);
-//      if (count($error)>0) $this->sLog->error(implode(',', $error));
-//    }
-    $oYear = Years::where('year', $cYear-1)->first();
-    if ($oYear){
-      $error =BookDay::createSeasson($oYear->start_date,$oYear->end_date);
-      if (count($error)>0) $this->sLog->error(implode(',', $error));
-    }
-    $oYear = Years::where('year', $cYear)->first();
-    if ($oYear){
-      $error =BookDay::createSeasson($oYear->start_date,$oYear->end_date);
-      if (count($error)>0) $this->sLog->error(implode(',', $error));
-    }
-    $oYear = Years::where('year', $cYear+1)->first();
-    if ($oYear){
-      $error =BookDay::createSeasson($oYear->start_date,$oYear->end_date);
-      if (count($error)>0) $this->sLog->error(implode(',', $error));
-    }
+    $BookDaysProcess = new \App\Services\BookDaysProcess();
+    $errors = $BookDaysProcess->process();
+    if (count($errors)>0){
+      $this->sLog->error(implode(' / ', $errors));
+    } 
+   
   }
 
  
