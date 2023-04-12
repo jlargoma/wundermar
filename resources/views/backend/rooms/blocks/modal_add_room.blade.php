@@ -3,7 +3,7 @@
     <div class="modal-content-wrapper">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position: absolute; top: 0px; right: 10px; z-index: 100;">
-          <i class="pg-close fs-20" ></i>
+          <i class="fa fa-close fs-20" ></i>
         </button>
         <div class="panel-body">
           <div class="panel panel-default" style="margin-top: 15px;">

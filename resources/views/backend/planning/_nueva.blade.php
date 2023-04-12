@@ -9,7 +9,7 @@ $uRole = getUsrRole();
     .daterangepicker{
         z-index: 10000!important;
     }
-    .pg-close{
+    .fa fa-close{
         font-size: 45px!important;
         color: white!important;
     }
@@ -33,7 +33,7 @@ $uRole = getUsrRole();
             </h4>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position: absolute; top: 0px; right: 10px; z-index: 100">
-            <i class="pg-close fs-20" style="color: #e8e8e8;"></i>
+            <i class="fa fa-close fs-20" style="color: #e8e8e8;"></i>
         </button>
     </div>
 

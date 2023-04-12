@@ -5,7 +5,7 @@
         <div class="block">
           <div class="block-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-              <i class="pg-close fs-14"></i>
+              <i class="fa fa-close fs-14"></i>
             </button>
             <h2 class="text-center">
               Temporada
@@ -28,7 +28,7 @@
         <div class="block">
           <div class="block-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-              <i class="pg-close fs-14"></i>
+              <i class="fa fa-close fs-14"></i>
             </button>
             <h2 class="text-center">
               Tipos de Temporada
@@ -48,7 +48,7 @@
       <div class="modal-content">
         <div class="block-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-            <i class="pg-close fs-14"></i>
+            <i class="fa fa-close fs-14"></i>
           </button>
           <h2 class="text-center">
             Definir Temporadas
@@ -87,7 +87,7 @@
         <div class="block">
           <div class="block-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
-                class="pg-close fs-14"
+                class="fa fa-close fs-14"
                 style="font-size: 40px!important;color: black!important"></i>
             </button>
             <h2 class="text-center">

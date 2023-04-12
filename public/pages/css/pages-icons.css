@@ -84,10 +84,10 @@ Pages Icons
 .pg-refresh_new:before {
 	content: "\e600";
 }
-.pg-close_line:before {
+.fa.fa-close_line:before {
 	content: "\e601";
 }
-.pg-close:before {
+.fa.fa-close:before {
 	content: "\e60a";
 }
 .pg-arrow_down:before {

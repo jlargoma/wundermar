@@ -245,7 +245,7 @@ sendFormRevenue();
                 <div class="block">
                     <div class="block-header">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position: absolute;right: 0;z-index: 3;">
-                            <i class="pg-close"></i>
+                            <i class="fa fa-close"></i>
                         </button>
                     </div>
                     <div class="block block-content" style="padding:20px;max-width: 100vw;">

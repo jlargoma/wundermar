@@ -23,6 +23,7 @@ use App\Traits\BookLogsTraits;
 use App\BookPartee;
 use App\ExtraPrices;
 use App\BookExtraPrices;
+use App\Settings;
 
 setlocale(LC_TIME, "ES");
 setlocale(LC_TIME, "es_ES");
@@ -108,7 +109,7 @@ class BookController extends AppController
         $mobile      = config('app.is_mobile');
         
         $alert_lowProfits = 0; //To the alert efect
-        $percentBenef     = 15;
+        $percentBenef     = Settings::getKeyValue('percentBenef');
         $lowProfits       = $this->lowProfitAlert($startYear, $endYear, $percentBenef, $alert_lowProfits);
 
         $ff_pendientes = Book::where('ff_status',4)->where('type_book','>',0)->count();
@@ -407,7 +408,7 @@ class BookController extends AppController
                 if ($request->input('costApto')) $book->cost_apto = $request->input('costApto');
                 if ($request->input('cost_total')) $book->cost_apto = $request->input('cost_total');
                 if (isset($request->priceDiscount) && $request->input('priceDiscount') == "yes"){
-                  $discount = \App\Settings::getKeyValue('discount_books');
+                  $discount = Settings::getKeyValue('discount_books');
                   $book->ff_status = 4;
                   $book->ff_discount = $discount;
                   $book->has_ff_discount = 1;
@@ -552,7 +553,7 @@ class BookController extends AppController
          */
         $low_profit   = false;
         $inc_percent  = $book->get_inc_percent();
-        $percentBenef = DB::table('percent')->find(1)->percent;
+        $percentBenef     = Settings::getKeyValue('percentBenef');
 
         if (round($inc_percent) <= $percentBenef)
         {
@@ -1305,7 +1306,7 @@ $textSupl = '';
       $toDay = new \DateTime();
       $toDayEnd = date('Y-m-d');
       $daysToCheck = array();
-      $payment_rule = \App\Settings::where('key', 'payment_rule')->get();
+      $payment_rule = Settings::where('key', 'payment_rule')->get();
       foreach ($payment_rule as $r){
         $cont = json_decode($r->content);
         $daysToCheck[$r->site_id] = $cont->days;
@@ -2012,8 +2013,8 @@ $textSupl = '';
                                                                              ->format('d/m/Y'), $roomsWithPax->id)) $rooms[] = $roomsWithPax;
         }
 
-        $instantPayment = (\App\Settings::where('key', 'instant_payment')
-                                        ->first()) ? \App\Settings::where('key', 'instant_payment')
+        $instantPayment = (Settings::where('key', 'instant_payment')
+                                        ->first()) ? Settings::where('key', 'instant_payment')
                                                                   ->first()->value : false;
 
         return view('backend.api.response-book-request', [
@@ -2047,7 +2048,7 @@ $textSupl = '';
         if ($site_id>0) $oGetRoomsSuggest->set_siteID($site_id);
         $rooms = $oGetRoomsSuggest->getItemsSuggest($pax,$start,$finish);
         
-        $oSetting = new \App\Settings();
+        $oSetting = new Settings();
         $url = $oSetting->getLongKeyValue('gha_sitio');
         foreach ($rooms as $k=>$v){
           unset($rooms[$k]['infoCancel']);
@@ -2691,7 +2692,7 @@ $textSupl = '';
         {
             $year      = $this->getActiveYear();
             $alert_lowProfits = 0; //To the alert efect
-            $percentBenef     = DB::table('percent')->find(1)->percent;
+            $percentBenef     = Settings::getKeyValue('percentBenef');
             $alarms = $this->lowProfitAlert($year->start_date, $year->end_date, $percentBenef, $alert_lowProfits);
 
             echo view('backend.planning.blocks.lowProfits',[

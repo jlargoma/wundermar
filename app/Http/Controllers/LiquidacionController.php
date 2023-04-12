@@ -132,7 +132,8 @@ class LiquidacionController extends AppController {
     $books = $qry_books->orderBy('start', 'ASC')->get();
             
     $alert_lowProfits = 0; //To the alert efect
-    $percentBenef = DB::table('percent')->find(1)->percent;
+    //$percentBenef = DB::table('percent')->find(1)->percent;
+    $percentBenef     = \app\Settings::getKeyValue('percentBenef');
     $lowProfits = [];
 
     $additionals = [];
@@ -2142,7 +2143,7 @@ public function updateGasto(Request $request) {
   }
 
   public function changePercentBenef(Request $request, $val) {
-    DB::table('percent')->where('id', 1)->update(['percent' => $val]);
+    Settings::where('key', 'percentBenef')->update(['value' => $val]);
     return "Cambiado";
   }
 

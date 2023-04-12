@@ -50,7 +50,7 @@
             <div class="modal-content-wrapper">
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
-                                class="pg-close fs-50"></i>
+                                class="fa fa-close fs-50"></i>
                     </button>
                     <div class="container-xs-height full-height">
                         <div class="row-xs-height">
@@ -134,7 +134,7 @@
             <div class="modal-content-wrapper">
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
-                                class="pg-close fs-50"></i>
+                                class="fa fa-close fs-50"></i>
                     </button>
                     <div class="container-xs-height full-height">
                         <div class="row-xs-height update-content">

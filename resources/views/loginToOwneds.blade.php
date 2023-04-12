@@ -115,7 +115,7 @@
 					<!-- END Overlay Logo !-->
 					<!-- BEGIN Overlay Close !-->
 					<a href="#" class="close-icon-light overlay-close text-black fs-16">
-						<i class="pg-close"></i>
+						<i class="fa fa-close"></i>
 					</a>
 					<!-- END Overlay Close !-->
 				</div>

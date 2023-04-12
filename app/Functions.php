@@ -389,12 +389,12 @@ function calcNights($start,$end) {
 
 function getAptosSite(){
   return [
-    1=>['RIAD1'],
+    1=>['APTO'],
     ];
 }
 function getAptosChannel(){
   return [
-    'RIAD1'
+    'APTO'
     ];
 }
 function getAptosBySite($site=1){
@@ -409,12 +409,12 @@ function configOtasAptosName($site=1){
   
   if ($site == 1){
     return [
-      'RIAD1' => 'RIAD 1',
+      'APTO' => 'APTO',
     ];
   }
   
   return [
-      'RIAD1' => 'RIAD 1',
+      'APTO' => 'APTO',
   ];
 }
 

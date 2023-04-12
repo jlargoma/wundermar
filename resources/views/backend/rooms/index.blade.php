@@ -112,7 +112,7 @@
       <div class="modal-content">
         <div class="block">
           <div class="block-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14" style="font-size: 40px!important;color: black!important"></i>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fs-14" style="font-size: 40px!important;color: black!important"></i>
             </button>
             <h2 class="text-center">
               Subida de archivos
@@ -144,7 +144,7 @@
       <div class="modal-content">
         <div class="block">
           <div class="block-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14" style="font-size: 40px!important;color: black!important"></i>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fs-14" style="font-size: 40px!important;color: black!important"></i>
             </button>
             <h2 class="text-center">
               Subida de Imágenes de cabeceras
@@ -182,7 +182,7 @@
       <div class="modal-content">
         <div class="block">
           <div class="block-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14" style="font-size: 40px!important;color: black!important"></i>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fs-14" style="font-size: 40px!important;color: black!important"></i>
             </button>
             <h2 class="text-center"> Widget Habitaciones</h2>
           </div>
@@ -205,7 +205,7 @@
     <div class="modal-content-wrapper">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position: absolute; top: 0px; right: 10px; z-index: 100;">
-          <i class="pg-close fs-20" ></i>
+          <i class="fa fa-close fs-20" ></i>
         </button>
         <div class="panel-body">
           <div class="panel panel-default" style="margin-top: 15px;">
@@ -249,7 +249,7 @@
     <div class="modal-content-wrapper">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position: absolute; top: 0px; right: 10px; z-index: 100;">
-          <i class="pg-close fs-20" ></i>
+          <i class="fa fa-close fs-20" ></i>
         </button>
         <div class="panel-body">
           <div class="panel panel-default" style="margin-top: 15px;">
@@ -296,7 +296,7 @@
       <div class="modal-content">
         <div class="block">
           <div class="block-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14" style="font-size: 40px!important;color: black!important"></i>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fs-14" style="font-size: 40px!important;color: black!important"></i>
             </button>
             <h2 class="text-center">Descripción Apto</h2>
           </div>
@@ -330,7 +330,7 @@
     <div class="modal-content-wrapper">						
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position: absolute; top: 0px; right: 10px; z-index: 100;">
-          <i class="pg-close fs-20" ></i>
+          <i class="fa fa-close fs-20" ></i>
         </button>
         <div class="percent-body">
 

@@ -477,7 +477,7 @@ input.beneficio,
   animation: pulsebtn 1s infinite!important;
   transform-origin: center!important;
 }
-.pg-close.fs-20, .pg-close{
+.fa.fa-close.fs-20, .fa.fa-close{
   font-size: 50px!important;
   font-weight: 800;
 }

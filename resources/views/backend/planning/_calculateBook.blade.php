@@ -10,7 +10,7 @@
               CALCULAR RESERVA
             </h4>
             <button type="button" class="close close-calculate" data-dismiss="modal" aria-hidden="true" style="position: absolute; top: 0px; right: 10px; z-index: 100">
-                <i class="pg-close fs-20" style="color: #e8e8e8;"></i>
+                <i class="fa fa-close fs-20" style="color: #e8e8e8;"></i>
             </button>
         </div>
     </div>

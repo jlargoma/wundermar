@@ -335,11 +335,7 @@ trait OtasTraits
    * @return \Illuminate\Http\Response
    */
   function calendSite($site = 1,$month=null,$year=null) {
-
-    
-    
     $oConfig = $this->oConfig;
-    
     $agencies = $oConfig->getAllAgency();
     $roomsLst = $oConfig->getRoomsName();
     $roomsSite = getAptosBySite($site);

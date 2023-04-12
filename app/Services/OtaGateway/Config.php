@@ -214,8 +214,7 @@ class Config {
 
   function getRooms($room = null) {
     $lst = [
-        'RIAD1' => null,
-        'LOCAL' => null,
+        'APTO' => null,
     ];
     if ($room) {
       return isset($lst[$room]) ? $lst[$room] : -1;
@@ -225,8 +224,7 @@ class Config {
 
   function getRoomsName() {
     return [
-        'RIAD1' => '',
-        'LOCAL' => 'LOCAL',
+        'APTO' => 'APTO',
     ];
   }
 

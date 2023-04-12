@@ -189,7 +189,7 @@ $is_mobile = $mobile;
     <div class="modal-dialog">
       <div class="modal-content-wrapper">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position: absolute; top: 0px; right: 10px; z-index: 100">
-            <i class="pg-close fs-20" style="color: #000!important;"></i>
+            <i class="fa fa-close fs-20" style="color: #000!important;"></i>
         </button>
         <div class="schedule">
           

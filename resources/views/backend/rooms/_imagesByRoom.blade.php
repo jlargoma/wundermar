@@ -11,7 +11,7 @@
 <div class="row content-loading">
     <div class="col-md-3 col-xs-12 pull-right">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-            <i class="pg-close fs-14" style="color: black!important"></i>
+            <i class="fa fa-close fs-14" style="color: black!important"></i>
         </button>
     </div>
     <div class="col-xs-12" style="padding: 0">

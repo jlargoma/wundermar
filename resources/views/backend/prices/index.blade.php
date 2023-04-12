@@ -59,7 +59,7 @@ $isMobile = config('app.is_mobile');
     .btn-inline{
       float:right; margin: 0 5px
     }
-    .pg-close{
+    .fa fa-close{
       font-size: 40px!important;color: black!important
     }
     input.datepicker2 {

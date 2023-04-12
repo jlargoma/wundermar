@@ -20,7 +20,7 @@
   .daterangepicker{
     z-index: 10000!important;
   }
-  .pg-close{
+  .fa fa-close{
     font-size: 45px!important;
     color: white!important;
   }

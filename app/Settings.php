@@ -14,13 +14,9 @@ class Settings extends Model
     
     static function getKeysSettingsGen() {
       return [
-          'partee_apartament_1'   => array('label' => 'Partee: ID Apartamento Aptos Riad','val'=>null),
-//          'partee_apartament_2'   => array('label' => 'Partee: ID Apartamento hotel Rosa de Oro','val'=>null),
-          'partee_apartament_3'   => array('label' => 'Partee: ID Apartamento Apartamentos Gloria','val'=>null),
-//          'partee_apartament_4'   => array('label' => 'Partee: ID EDIF. ELVIRA 109','val'=>null),
-          'partee_apartament_5'   => array('label' => 'Partee: ID SILOE','val'=>null),
-          'partee_apartament_6' => array('label' => 'Partee: ID ZAHIRA SUITES', 'val' => null),
+          'partee_apartament_1'   => array('label' => 'Partee: ID Apartamento Wundermar','val'=>null),
           'send_sms_days'       => array('label' => 'Enviar SMS Partee a % días del CheckIn','val'=>null),
+          'percentBenef'       => array('label' => 'Porcentaje de beneficio','val'=>Settings::getKeyValue('percentBenef')),
       ];
     }
     
@@ -65,11 +61,6 @@ class Settings extends Model
           'send_encuesta_subject'             =>'Asunto de Encuestas',
           'text_payment_link'                 =>'WSP LINKS PAGO',
           'widget_observations'               =>'Widget: Observaciones de su reserva',
-//          'widget_extras_paking'              =>'Widget: Observaciones Suplemento Parking',
-//          'widget_extras_breakfast'           =>'Widget: Observaciones Suplemento Desayuno',
-//          'widget_alert_cancelation'          =>'Widget: Popover Cancelación gratuita',
-          //'book_email_supplements'            =>'Mail compra de Suplementos',
-          //'puncharseSupl'                     =>'Mail de Suplementos pagados',
           'mail_checkin_msg'                  => 'Mensaje contacto y teléf. checkin',
           'mail_cancelBloq' => 'Bloqueo Cancelado - Pago Vencido',
       ];

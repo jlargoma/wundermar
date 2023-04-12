@@ -550,7 +550,7 @@ a.prices:hover{
 
 .price-booking:before{
   content: '';
-  background:url('/pages/booking.png'); 
+  background:url('/img/icons/booking.png'); 
   background-size: contain;
   width: 18px;
   height: 18px;
@@ -559,7 +559,7 @@ a.prices:hover{
 }
 .price-expedia:before{
   content: '';
-  background:url('/pages/expedia.png'); 
+  background:url('/img/icons/expedia.png'); 
   background-size: contain;
   float: left;
   width: 12px;
@@ -570,7 +570,7 @@ a.prices:hover{
 }
 .price-google:before{
   content: '';
-  background:url('/pages/google.png'); 
+  background:url('/img/icons/google.png'); 
   background-size: contain;
   float: left;
   width: 12px;
@@ -582,7 +582,7 @@ a.prices:hover{
 
 .price-airbnb:before{
   content: '';
-  background:url('/pages/airbnb.png'); 
+  background:url('/img/icons/airbnb.png'); 
   background-size: contain;
   float: left;
   width: 15px;
@@ -780,7 +780,7 @@ div#paymentDataContent a {
 }
 
 .btn-sms{
-  background-image: url(/img/icon-sms.png) !important;
+  background-image: url(/img/icon-/sms.png) !important;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
